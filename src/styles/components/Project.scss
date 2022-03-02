@@ -1,0 +1,47 @@
+.project {
+    position: relative;
+    // padding: 400px 0;
+    background: var(--black);
+    .image__wrapper {
+        position: relative;
+
+        .image__text {
+            position: absolute;
+            color: var(--white);
+            width: 100%;
+            text-align: center;
+            z-index: 1;
+            top: 40px;
+        }
+
+        img {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            width: 320px; /* Need a specific value to work */
+            z-index: 0;
+        }
+    }
+
+    .project__text {
+        position: absolute;
+        right: 0;
+        width: 400px;
+        color: var(--white);
+        top: 160px;
+        z-index: 10;
+    }
+
+    .project__rotating__text {
+        text-align: right;
+        margin-right: 56px;
+        margin-top: 66px;
+        transition: 0.4s;
+
+        &:hover {
+            color: grey;
+        }
+    }
+}

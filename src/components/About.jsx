@@ -26,15 +26,22 @@ const About = () => {
                     <br />
                 </p>
                 <div className='about__icons'>
-                    <button>
-                        <FontAwesomeIcon icon={faGithubSquare} />
-                    </button>
-                    <button>
-                        <FontAwesomeIcon icon={faLinkedin} />
-                    </button>
-                    <button>
-                        <FontAwesomeIcon icon={faTwitterSquare} />
-                    </button>
+                    <a href='https://github.com/adampugh' target='_blank' rel='noreferrer'>
+                        <button>
+                            <FontAwesomeIcon icon={faGithubSquare} />
+                        </button>
+                    </a>
+                    <a href='https://www.linkedin.com/in/adam-pugh-59502b88/' target='_blank' rel='noreferrer'>
+                        <button>
+                            <FontAwesomeIcon icon={faLinkedin} />
+                        </button>
+                    </a>
+
+                    <a href='https://twitter.com/adam_frontdev' target='_blank' rel='noreferrer'>
+                        <button>
+                            <FontAwesomeIcon icon={faTwitterSquare} />
+                        </button>
+                    </a>
                 </div>
             </div>
         </section>
