@@ -1,0 +1,45 @@
+#skills {
+    background: var(--black);
+    color: var(--white);
+    padding-top: 400px;
+    overflow: hidden;
+    height: 800px;
+
+    .skills__marquees {
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 140px;
+        // font-family: 'Rufina', serif;
+        // text-transform: uppercase;
+        transform: rotate(-5deg);
+    }
+
+    .skills__marquee1 {
+        display: inline-block;
+        animation: marquee 40s linear infinite;
+    }
+
+    .skills__marquee2 {
+        display: inline-block;
+        animation: marquee2 40s linear infinite;
+        animation-delay: 20s;
+    }
+
+    @keyframes marquee {
+        from {
+            transform: translateX(0%);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+    @keyframes marquee2 {
+        from {
+            transform: translateX(-50%);
+        }
+        to {
+            transform: translateX(-150%);
+        }
+    }
+}

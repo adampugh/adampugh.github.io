@@ -1,0 +1,25 @@
+.rotatingText {
+    .rotatingText__circle {
+        display: inline-block;
+        position: relative;
+        transform: scale(1);
+        transform-origin: center center;
+        animation: rotation 15s linear infinite;
+        height: calc(330px - 13rem);
+
+        .rotatingText__letter {
+            height: 60px;
+            position: absolute;
+            transform-origin: 0 100%;
+        }
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}

@@ -1,0 +1,43 @@
+#hero {
+    position: relative;
+    height: 90vh; // remove later
+
+    .hero__title__container {
+        display: flex;
+        align-items: center;
+
+        .hero__title__wrapper {
+            margin: 0 auto;
+            display: inline-block;
+            text-align: left;
+
+            .hero__title {
+                font-size: 170px;
+                line-height: 0.8;
+            }
+        }
+    }
+
+    .hero__copyright {
+        position: absolute;
+        top: 20vh;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        cursor: default;
+    }
+
+    .hero__view-projects {
+        background: inherit;
+        position: absolute;
+        right: 0;
+        bottom: 80px;
+        margin-right: 56px;
+        transition: 0.4s;
+        color: var(--foreground);
+
+        &:hover {
+            cursor: pointer;
+            color: grey;
+        }
+    }
+}
