@@ -42,7 +42,7 @@ const DarkModeButton = () => {
                     <FontAwesomeIcon icon={faSun} />
                     <FontAwesomeIcon icon={faMoon} />
                 </div>
-                <input id='toggle' name='toggle' type='checkbox' checked={isEnabled} onClick={toggleState} />
+                <input id='toggle' name='toggle' type='checkbox' checked={isEnabled} onClick={toggleState} readOnly />
             </div>
         </label>
     );

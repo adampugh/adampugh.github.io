@@ -1,3 +1,16 @@
+# Todos
+
+-   Buy and add font
+-   Add three.js and model
+-   Animate 3D model on scroll
+-   Finish Work section horizontal scroll
+-   Add three.js wavey image motion
+-   Cursor animation
+-   Add OutRun tv (maybe just add placeholder with pixel art + 3D model)
+-   Add smooth scroll
+-   Create project pages
+-   Deploy
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
