@@ -8,7 +8,7 @@ const RotatingText = ({ text }) => {
         <div className='rotatingText'>
             <div className='rotatingText__circle'>
                 {textArray.map(({ letter, degree }, i) => (
-                    <p className='rotatingText__letter' key={degree} style={{ transform: degree }} id={degree}>
+                    <p className='rotatingText__letter' key={degree} style={{ transform: degree }}>
                         {letter}
                     </p>
                 ))}
