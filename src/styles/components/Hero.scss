@@ -13,8 +13,12 @@
 
             .hero__title {
                 font-size: 140px;
-                line-height: 0.8;
+                // line-height: 0.8;
                 overflow: hidden;
+            }
+
+            .hero__title--second {
+                margin-top: -90px;
             }
         }
     }

@@ -14,7 +14,7 @@ const About = () => {
                 </h2>
                 <p>
                     Self-taught developer, enthusiastic about learning and building purposeful projects with users in
-                    mind. Currently studying TypeScript, D3.js and Japanese Self-taught developer, enthusiastic about
+                    mind. Currently studying TypeScript, Three.js and Japanese Self-taught developer, enthusiastic about
                     learning and building purposeful projects with users in mind. Currently studying TypeScript, D3.js
                     and Japanese.
                     <br />
