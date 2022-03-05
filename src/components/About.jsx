@@ -14,9 +14,7 @@ const About = () => {
                 </h2>
                 <p>
                     Self-taught developer, enthusiastic about learning and building purposeful projects with users in
-                    mind. Currently studying TypeScript, Three.js and Japanese Self-taught developer, enthusiastic about
-                    learning and building purposeful projects with users in mind. Currently studying TypeScript, D3.js
-                    and Japanese.
+                    mind. Currently studying TypeScript, Three.js and Japanese.
                     <br />
                     <br />
                     <br />
@@ -36,7 +34,6 @@ const About = () => {
                             <FontAwesomeIcon icon={faLinkedin} />
                         </button>
                     </a>
-
                     <a href='https://twitter.com/adam_frontdev' target='_blank' rel='noreferrer'>
                         <button>
                             <FontAwesomeIcon icon={faTwitterSquare} />

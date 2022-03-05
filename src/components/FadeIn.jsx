@@ -13,14 +13,14 @@ const opacityVariant = {
     },
 };
 
-const FadeIn = ({ children }) => {
-    console.log('fade in ', children);
-
-    return (
-        <motion.div variants={opacityVariant} style={{ display: 'inline' }} initial='initial' animate='animate'>
-            {children}
-        </motion.div>
-    );
-};
+const FadeIn = ({ children }) => (
+    <motion.div
+        variants={opacityVariant}
+        style={{ display: 'inline' }}
+        initial='initial'
+        animate='animate'
+        children={children}
+    />
+);
 
 export default FadeIn;
