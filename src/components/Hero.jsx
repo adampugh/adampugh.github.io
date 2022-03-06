@@ -10,10 +10,10 @@ const Hero = () => {
             <div className='hero__title__container'>
                 <div className='hero__title__wrapper'>
                     <h1 className='hero__title'>
-                        <StaggeredText text='Frontend' />
+                        <StaggeredText text='FRONTEND' />
                     </h1>
                     <h1 className='hero__title hero__title--second'>
-                        <StaggeredText text='Developer' />
+                        <StaggeredText text='DEVELOPER' />
                     </h1>
                 </div>
             </div>
