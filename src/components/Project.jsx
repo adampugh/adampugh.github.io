@@ -6,13 +6,14 @@ import RotatingText from './RotatingText';
 import '../styles/components/Project.scss';
 
 const Project = ({ project }) => {
-    const { heading, image, gitHubLink, tech, text, projectLink } = project;
+    const { heading, image, device, gitHubLink, tech, text, projectLink } = project;
 
     return (
         <div id='project'>
             <div className='container project__grid'>
                 <div className='project__grid__images'>
-                    <img src={image} alt='plants' />
+                    <img className='project__grid__images__mainImage' src={image} alt='plants' />
+                    <img className='project__grid__images__device' src={device} alt='device' />
                 </div>
                 <div className='project__grid__info'>
                     <div className='project__grid__info__heading'>

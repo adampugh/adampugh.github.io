@@ -2,11 +2,31 @@ import { useState } from 'react';
 import '../styles/components/Work.scss';
 
 import Project from './Project';
-import Example from '../assets/images/example.png';
+import Example from '../assets/images/prepxp.png';
+import Mobile from '../assets/images/mobile.png';
 
 const projects = [
     {
         image: Example,
+        device: Mobile,
+        heading: 'Daily HIIT',
+        gitHubLink: 'http://www.google.com',
+        tech: 'REACT | REDUX | TYPESCRIPT',
+        text: 'PrepXP is a web application built in React, Redux and Firebase that allows users to create and search for lists of job interview questions. PrepXP features a blog section created in Node and a comprehensive test suite built in Jest and Enzyme.',
+        projectLink: 'http://www.cool.com',
+    },
+    {
+        image: Example,
+        device: Mobile,
+        heading: 'Kokonoka',
+        gitHubLink: 'http://www.google.com',
+        tech: 'REACT | REDUX | TYPESCRIPT',
+        text: 'PrepXP is a web application built in React, Redux and Firebase that allows users to create and search for lists of job interview questions. PrepXP features a blog section created in Node and a comprehensive test suite built in Jest and Enzyme.',
+        projectLink: 'http://www.cool.com',
+    },
+    {
+        image: Example,
+        device: Mobile,
         heading: 'PrepXP',
         gitHubLink: 'http://www.google.com',
         tech: 'REACT | REDUX | TYPESCRIPT',
@@ -15,23 +35,8 @@ const projects = [
     },
     {
         image: Example,
-        heading: 'three.js',
-        gitHubLink: 'http://www.google.com',
-        tech: 'REACT | REDUX | TYPESCRIPT',
-        text: 'PrepXP is a web application built in React, Redux and Firebase that allows users to create and search for lists of job interview questions. PrepXP features a blog section created in Node and a comprehensive test suite built in Jest and Enzyme.',
-        projectLink: 'http://www.cool.com',
-    },
-    {
-        image: Example,
-        heading: 'THIRD PROJCT',
-        gitHubLink: 'http://www.google.com',
-        tech: 'REACT | REDUX | TYPESCRIPT',
-        text: 'PrepXP is a web application built in React, Redux and Firebase that allows users to create and search for lists of job interview questions. PrepXP features a blog section created in Node and a comprehensive test suite built in Jest and Enzyme.',
-        projectLink: 'http://www.cool.com',
-    },
-    {
-        image: Example,
-        heading: 'FOURTH PROJ',
+        device: Mobile,
+        heading: 'Portfolio',
         gitHubLink: 'http://www.google.com',
         tech: 'REACT | REDUX | TYPESCRIPT',
         text: 'PrepXP is a web application built in React, Redux and Firebase that allows users to create and search for lists of job interview questions. PrepXP features a blog section created in Node and a comprehensive test suite built in Jest and Enzyme.',
@@ -59,13 +64,7 @@ const Work = () => {
 
     return (
         <div id='work'>
-            <div className='container work__wrapper'>
-                <h2 className='title__h2'>
-                    <span className='title__h2__number'>01</span>Wørk
-                </h2>
-            </div>
-            <Project project={projects[currentProjectIndex]} />
-            <div className='container work__bottom'>
+            <div className='container work__header'>
                 <div className='work__numerals'>
                     {numerals.map((text, index) => {
                         return (
@@ -80,12 +79,16 @@ const Work = () => {
                         );
                     })}
                 </div>
+                <h2 className='title__h2'>
+                    <span className='title__h2__number'>01</span>Wørk
+                </h2>
                 <div className='work__nextProject'>
                     <button onClick={handleNextProject} className='spaced-text'>
                         NEXT PROJECT
                     </button>
                 </div>
             </div>
+            <Project project={projects[currentProjectIndex]} />
         </div>
     );
 };

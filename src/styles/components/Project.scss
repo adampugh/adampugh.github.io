@@ -1,5 +1,5 @@
 #project {
-    margin-bottom: 100px;
+    padding-bottom: 100px;
 
     .project__grid {
         display: grid;
@@ -7,10 +7,20 @@
 
         .project__grid__images {
             max-width: 100%;
+            position: relative;
 
-            img {
-                max-width: 100%;
-                padding-right: 100px;
+            .project__grid__images__mainImage {
+                max-width: 80%;
+                margin: 0 auto;
+                padding: 0 70px;
+                margin-left: 110px;
+            }
+
+            .project__grid__images__device {
+                position: absolute;
+                left: 0;
+                top: 20%;
+                height: 380px;
             }
         }
 
