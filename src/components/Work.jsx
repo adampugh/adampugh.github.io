@@ -1,20 +1,91 @@
+import { useState } from 'react';
 import '../styles/components/Work.scss';
 
 import Project from './Project';
+import Example from '../assets/images/example.png';
+
+const projects = [
+    {
+        image: Example,
+        heading: 'PrepXP',
+        gitHubLink: 'http://www.google.com',
+        tech: 'REACT | REDUX | TYPESCRIPT',
+        text: 'PrepXP is a web application built in React, Redux and Firebase that allows users to create and search for lists of job interview questions. PrepXP features a blog section created in Node and a comprehensive test suite built in Jest and Enzyme.',
+        projectLink: 'http://www.cool.com',
+    },
+    {
+        image: Example,
+        heading: 'three.js',
+        gitHubLink: 'http://www.google.com',
+        tech: 'REACT | REDUX | TYPESCRIPT',
+        text: 'PrepXP is a web application built in React, Redux and Firebase that allows users to create and search for lists of job interview questions. PrepXP features a blog section created in Node and a comprehensive test suite built in Jest and Enzyme.',
+        projectLink: 'http://www.cool.com',
+    },
+    {
+        image: Example,
+        heading: 'THIRD PROJCT',
+        gitHubLink: 'http://www.google.com',
+        tech: 'REACT | REDUX | TYPESCRIPT',
+        text: 'PrepXP is a web application built in React, Redux and Firebase that allows users to create and search for lists of job interview questions. PrepXP features a blog section created in Node and a comprehensive test suite built in Jest and Enzyme.',
+        projectLink: 'http://www.cool.com',
+    },
+    {
+        image: Example,
+        heading: 'FOURTH PROJ',
+        gitHubLink: 'http://www.google.com',
+        tech: 'REACT | REDUX | TYPESCRIPT',
+        text: 'PrepXP is a web application built in React, Redux and Firebase that allows users to create and search for lists of job interview questions. PrepXP features a blog section created in Node and a comprehensive test suite built in Jest and Enzyme.',
+        projectLink: 'http://www.cool.com',
+    },
+];
+
+const numerals = ['I', 'II', 'III', 'IV'];
 
 const Work = () => {
+    const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    const handleNumeralClick = (e) => {
+        const datasetIndex = e.target.dataset.index;
+        setActiveIndex(datasetIndex);
+        setCurrentProjectIndex(datasetIndex);
+    };
+
+    const handleNextProject = () => {
+        const nextIndex = projects[currentProjectIndex + 1] ? currentProjectIndex + 1 : 0;
+        setActiveIndex(nextIndex);
+        setCurrentProjectIndex(nextIndex);
+    };
+
     return (
         <div id='work'>
-            <div className='container'>
+            <div className='container work__wrapper'>
                 <h2 className='title__h2'>
                     <span className='title__h2__number'>01</span>Wørk
                 </h2>
             </div>
-
-            {/* <div className='green'></div>
-            <div className='blue'></div>
-            <div className='red'></div> */}
-            <Project />
+            <Project project={projects[currentProjectIndex]} />
+            <div className='container work__bottom'>
+                <div className='work__numerals'>
+                    {numerals.map((text, index) => {
+                        return (
+                            <>
+                                <button
+                                    className={index === +activeIndex ? 'work__numerals__selected' : ''}
+                                    data-index={index}
+                                    onClick={handleNumeralClick}>
+                                    {text}
+                                </button>{' '}
+                            </>
+                        );
+                    })}
+                </div>
+                <div className='work__nextProject'>
+                    <button onClick={handleNextProject} className='spaced-text'>
+                        NEXT PROJECT
+                    </button>
+                </div>
+            </div>
         </div>
     );
 };

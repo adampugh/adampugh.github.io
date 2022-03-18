@@ -1,47 +1,103 @@
-.project {
-    position: relative;
-    background: var(--black);
+#project {
+    margin-bottom: 100px;
 
-    .image__wrapper {
-        position: relative;
+    .project__grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
 
-        .image__text {
-            position: absolute;
-            color: var(--white);
-            width: 100%;
-            text-align: center;
-            z-index: 1;
-            top: 40px;
+        .project__grid__images {
+            max-width: 100%;
+
+            img {
+                max-width: 100%;
+                padding-right: 100px;
+            }
         }
 
-        img {
-            position: absolute;
-            left: 0;
-            right: 0;
-            margin-left: auto;
-            margin-right: auto;
-            width: 320px; /* Need a specific value to work */
-            z-index: 0;
-        }
-    }
+        .project__grid__info {
+            h2,
+            h3,
+            h4,
+            p {
+                font-family: 'Sarabun', sans-serif;
+            }
 
-    .project__text {
-        position: absolute;
-        right: 0;
-        width: 440px;
-        color: var(--white);
-        top: 130px;
-        z-index: 10;
-    }
+            .project__grid__info__heading {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 60px;
 
-    .project__rotating__text {
-        text-align: right;
-        margin-right: 56px;
-        margin-top: 66px;
-        transition: 0.4s;
+                svg {
+                    height: 40px;
+                    transition: 0.4s;
+                    color: var(--white);
 
-        &:hover {
-            color: grey;
+                    &:hover {
+                        color: grey;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .project__grid__info__button {
+                margin-top: 80px;
+                text-align: right;
+                margin-right: 56px;
+                cursor: pointer;
+                transition: 0.4s;
+
+                &:hover {
+                    color: grey;
+                }
+            }
         }
     }
 }
+
+// .project {
+//     position: relative;
+//     background: var(--black);
+
+//     .image__wrapper {
+//         position: relative;
+
+//         .image__text {
+//             position: absolute;
+//             color: var(--white);
+//             width: 100%;
+//             text-align: center;
+//             z-index: 1;
+//             top: 40px;
+//         }
+
+//         img {
+//             position: absolute;
+//             left: 0;
+//             right: 0;
+//             margin-left: auto;
+//             margin-right: auto;
+//             width: 320px; /* Need a specific value to work */
+//             z-index: 0;
+//         }
+//     }
+
+//     .project__text {
+//         position: absolute;
+//         right: 0;
+//         width: 440px;
+//         color: var(--white);
+//         top: 130px;
+//         z-index: 10;
+//     }
+
+//     .project__rotating__text {
+//         text-align: right;
+//         margin-right: 56px;
+//         margin-top: 66px;
+//         transition: 0.4s;
+
+//         &:hover {
+//             color: grey;
+//         }
+//     }
+// }
