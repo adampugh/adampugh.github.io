@@ -3,7 +3,7 @@
     color: var(--white);
     padding-top: 400px;
     overflow: hidden;
-    height: 800px;
+    height: 900px;
 
     .skills__marquees {
         overflow: hidden;
@@ -15,12 +15,18 @@
     .skills__marquee1 {
         display: inline-block;
         animation: marquee 40s linear infinite;
+        font-family: 'VulturaOutline';
     }
 
     .skills__marquee2 {
         display: inline-block;
         animation: marquee2 40s linear infinite;
         animation-delay: 20s;
+        font-family: 'VulturaOutline';
+    }
+
+    .skills__dagger {
+        font-family: 'Vultura';
     }
 
     @keyframes marquee {

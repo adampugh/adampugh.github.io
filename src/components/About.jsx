@@ -9,7 +9,7 @@ const About = () => (
     <section id='about'>
         <div className='container about__text'>
             <h2 className='title__h2'>
-                <span className='title__h2__number'>02</span>About
+                <span className='title__h2__number'>02</span>Abøųt
             </h2>
             <p>
                 Self-taught developer, enthusiastic about learning and building purposeful projects with users in mind.

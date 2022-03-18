@@ -7,7 +7,7 @@ const Work = () => {
         <div id='work'>
             <div className='container'>
                 <h2 className='title__h2'>
-                    <span className='title__h2__number'>01</span>Work
+                    <span className='title__h2__number'>01</span>Wørk
                 </h2>
             </div>
 

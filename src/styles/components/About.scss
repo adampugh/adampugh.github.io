@@ -3,14 +3,13 @@
     text-align: center;
     color: var(--white);
     padding: 400px 0;
-    font-family: Rufina;
 
     .about__text {
         max-width: 500px;
 
         p {
             margin-top: 20px;
-            font-family: 'Rufina', serif;
+            font-family: 'Sarabun', sans-serif;
         }
     }
 
@@ -30,7 +29,7 @@
             transition: 0.4s;
 
             &:hover {
-                color: grey;
+                color: var(--white);
             }
         }
     }
