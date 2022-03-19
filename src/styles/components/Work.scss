@@ -1,6 +1,6 @@
 #work {
     background: var(--black);
-    padding-top: 400px;
+    // padding-top: 400px;
     color: var(--white);
 
     .title__h2 {
@@ -10,10 +10,15 @@
     }
 
     .work__header {
+        text-align: center;
+        padding-bottom: 140px;
+    }
+
+    .work__bottom {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-bottom: 140px;
+        margin-top: 100px;
     }
 
     .work__nextProject {

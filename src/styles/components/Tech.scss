@@ -1,0 +1,27 @@
+#tech {
+    background: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 400px 0;
+
+    .tech__badges__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 40px;
+        padding-top: 80px;
+
+        .tech__badge {
+            justify-self: center;
+
+            svg {
+                height: 100px;
+                fill: var(--white);
+                margin: 0 auto;
+            }
+
+            p {
+                margin-top: 20px;
+            }
+        }
+    }
+}

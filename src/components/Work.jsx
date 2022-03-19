@@ -1,9 +1,28 @@
 import { useState } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
 import '../styles/components/Work.scss';
 
+import StaggeredText from './StaggeredText';
 import Project from './Project';
 import Example from '../assets/images/prepxp.png';
-import Mobile from '../assets/images/mobile.png';
+import Mobile from '../assets/images/prepxp-mobile.png';
+import Kokonoka from '../assets/images/kokonoka.gif';
+import KokonokaMobile from '../assets/images/kokonoka-mobile.png';
+
+const opacityVariant = {
+    initial: {
+        opacity: 0,
+    },
+    animate: {
+        opacity: 1,
+        transition: {
+            delay: 1,
+            duration: 0.6,
+        },
+    },
+};
 
 const projects = [
     {
@@ -19,17 +38,17 @@ const projects = [
         image: Example,
         device: Mobile,
         heading: 'PrepXP',
-        gitHubLink: 'http://www.google.com',
+        gitHubLink: 'https://github.com/adampugh/prepxp',
         tech: 'REACT | REDUX | FIREBASE',
         text: 'PrepXP is a web application built in React, Redux and Firebase that allows users to create and search for lists of job interview questions. PrepXP features a blog section created in Node and a comprehensive test suite built in Jest and Enzyme.',
-        projectLink: 'http://www.cool.com',
+        projectLink: 'https://adampugh.github.io/prepxp/',
     },
     {
-        image: Example,
-        device: Mobile,
+        image: Kokonoka,
+        device: KokonokaMobile,
         heading: 'Kokonoka',
         gitHubLink: 'http://www.google.com',
-        tech: 'REACT | FRAMER MOTION | SASS',
+        tech: 'REACT | FRAMER MOTION',
         text: 'PrepXP is a web application built in React, Redux and Firebase that allows users to create and search for lists of job interview questions. PrepXP features a blog section created in Node and a comprehensive test suite built in Jest and Enzyme.',
         projectLink: 'http://www.cool.com',
     },
@@ -49,6 +68,8 @@ const numerals = ['I', 'II', 'III', 'IV'];
 const Work = () => {
     const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
     const [activeIndex, setActiveIndex] = useState(0);
+    const { inView, ref } = useInView();
+    const animationControl = useAnimation();
 
     const handleNumeralClick = (e) => {
         const datasetIndex = e.target.dataset.index;
@@ -62,9 +83,33 @@ const Work = () => {
         setCurrentProjectIndex(nextIndex);
     };
 
+    if (inView) {
+        animationControl.start({
+            opacity: 1,
+            y: 0,
+            transition: {
+                type: 'intertia',
+                when: 'beforeChildren',
+                staggerChildren: 0.4,
+                delay: 0.5,
+                duration: 1,
+            },
+        });
+    }
+
     return (
-        <div id='work'>
-            <div className='container work__header'>
+        <div id='work' ref={ref}>
+            <motion.div
+                className='container work__header'
+                variants={opacityVariant}
+                initial='initial'
+                animate={animationControl}>
+                <h2 className='title__h2'>
+                    <span className='title__h2__number'>01</span>Work
+                </h2>
+            </motion.div>
+            <Project project={projects[currentProjectIndex]} />
+            <div className='container work__bottom'>
                 <div className='work__numerals'>
                     {numerals.map((text, index) => {
                         return (
@@ -79,16 +124,12 @@ const Work = () => {
                         );
                     })}
                 </div>
-                <h2 className='title__h2'>
-                    <span className='title__h2__number'>01</span>Wørk
-                </h2>
                 <div className='work__nextProject'>
                     <button onClick={handleNextProject} className='spaced-text'>
                         NEXT PROJECT
                     </button>
                 </div>
             </div>
-            <Project project={projects[currentProjectIndex]} />
         </div>
     );
 };

@@ -10,7 +10,8 @@
             position: relative;
 
             .project__grid__images__mainImage {
-                max-width: 80%;
+                // max-width: 80%;
+                max-width: 523px;
                 margin: 0 auto;
                 padding: 0 70px;
                 margin-left: 110px;
@@ -20,7 +21,7 @@
                 position: absolute;
                 left: 0;
                 top: 20%;
-                height: 380px;
+                max-height: 380px;
             }
         }
 
@@ -36,9 +37,13 @@
                 display: flex;
                 justify-content: space-between;
                 margin-bottom: 20px;
+                margin-bottom: 10px;
+                border-bottom: 1px solid white;
+                padding-bottom: 10px;
+                align-items: baseline;
 
                 svg {
-                    height: 40px;
+                    height: 30px;
                     transition: 0.4s;
                     color: var(--white);
 
@@ -47,6 +52,10 @@
                         cursor: pointer;
                     }
                 }
+            }
+
+            .project__grid__info__tech {
+                margin-bottom: 10px;
             }
 
             .project__grid__info__button {
