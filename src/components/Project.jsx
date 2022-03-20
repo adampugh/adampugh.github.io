@@ -3,29 +3,32 @@ import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion';
 
 import RotatingText from './RotatingText';
-// import MobileFrame from '../assets/images/mobile-frame.png';
 
 import '../styles/components/Project.scss';
-import { useEffect } from 'react';
 
 const Project = ({ project }) => {
     const { heading, image, device, gitHubLink, tech, text, projectLink } = project;
 
-    useEffect(() => {
-        console.log('trggered again');
-    }, [project]);
-
     return (
-        <div id='project'>
+        <motion.div id='project'>
             <motion.div
                 className='container project__grid'
+                key='projectKey'
                 initial={{ opacity: 0, x: 100 }}
+                exit={{
+                    opacity: 0,
+                    x: [0, -100, 100],
+                    transition: {
+                        duration: 0.7,
+                        times: [0, 0.9, 1],
+                    },
+                }}
                 animate={{
                     opacity: 1,
                     x: 0,
                     transition: {
                         delay: 1,
-                        duration: 0.8,
+                        duration: 0.7,
                     },
                 }}>
                 <div className='project__grid__images'>
@@ -50,7 +53,7 @@ const Project = ({ project }) => {
                     </div>
                 </div>
             </motion.div>
-        </div>
+        </motion.div>
     );
 };
 

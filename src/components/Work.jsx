@@ -1,10 +1,9 @@
-import { useState } from 'react';
-import { motion, useAnimation } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { motion, useAnimation, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 import '../styles/components/Work.scss';
 
-import StaggeredText from './StaggeredText';
 import Project from './Project';
 import Example from '../assets/images/prepxp.png';
 import Mobile from '../assets/images/prepxp-mobile.png';
@@ -68,18 +67,29 @@ const numerals = ['I', 'II', 'III', 'IV'];
 const Work = () => {
     const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
     const [activeIndex, setActiveIndex] = useState(0);
+    const [isAnimating, setIsAnimating] = useState(false);
+
     const { inView, ref } = useInView();
     const animationControl = useAnimation();
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsAnimating(false);
+        }, 700);
+        return () => clearTimeout(timer);
+    }, [isAnimating]);
 
     const handleNumeralClick = (e) => {
         const datasetIndex = e.target.dataset.index;
         setActiveIndex(datasetIndex);
+        setIsAnimating(true);
         setCurrentProjectIndex(datasetIndex);
     };
 
     const handleNextProject = () => {
         const nextIndex = projects[currentProjectIndex + 1] ? currentProjectIndex + 1 : 0;
         setActiveIndex(nextIndex);
+        setIsAnimating(true);
         setCurrentProjectIndex(nextIndex);
     };
 
@@ -108,19 +118,20 @@ const Work = () => {
                     <span className='title__h2__number'>01</span>Work
                 </h2>
             </motion.div>
-            <Project project={projects[currentProjectIndex]} />
+            <AnimatePresence>
+                {!isAnimating && <Project project={projects[currentProjectIndex]} isAnimating={isAnimating} />}
+            </AnimatePresence>
             <div className='container work__bottom'>
                 <div className='work__numerals'>
                     {numerals.map((text, index) => {
                         return (
-                            <>
-                                <button
-                                    className={index === +activeIndex ? 'work__numerals__selected' : ''}
-                                    data-index={index}
-                                    onClick={handleNumeralClick}>
-                                    {text}
-                                </button>{' '}
-                            </>
+                            <button
+                                key={text}
+                                className={index === +activeIndex ? 'work__numerals__selected' : ''}
+                                data-index={index}
+                                onClick={handleNumeralClick}>
+                                {text}
+                            </button>
                         );
                     })}
                 </div>

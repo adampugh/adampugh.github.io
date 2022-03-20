@@ -2,6 +2,7 @@
     background: var(--black);
     // padding-top: 400px;
     color: var(--white);
+    padding-bottom: 400px;
 
     .title__h2 {
         color: var(--white);
@@ -43,6 +44,7 @@
             // transform: scale(-1);
             font-family: 'VulturaOutline';
             cursor: pointer;
+            margin-right: 10px;
 
             &:hover {
                 cursor: pointer;
