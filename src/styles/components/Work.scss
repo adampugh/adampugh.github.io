@@ -1,18 +1,18 @@
 #work {
     background: var(--black);
-    // padding-top: 400px;
     color: var(--white);
     padding-bottom: 400px;
 
     .title__h2 {
         color: var(--white);
         text-align: center;
-        // padding-bottom: 80px;
     }
 
     .work__header {
-        text-align: center;
         padding-bottom: 140px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .work__bottom {
@@ -34,16 +34,11 @@
     }
 
     .work__numerals {
-        // left: 0;
-        // top: 0;
-        // position: absolute;
         font-size: 40px;
         cursor: default;
         button {
-            // writing-mode: vertical-lr;
-            // transform: scale(-1);
-            font-family: 'VulturaOutline';
             cursor: pointer;
+            font-family: 'VulturaOutline';
             margin-right: 10px;
 
             &:hover {

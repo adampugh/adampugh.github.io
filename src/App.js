@@ -1,5 +1,6 @@
 import Nav from './components/Nav';
 import Hero from './components/Hero';
+import Block from './components/Block';
 import Work from './components/Work';
 import Tech from './components/Tech';
 // import Skills from './components/Skills';
@@ -12,6 +13,7 @@ const App = () => {
         <div className='App'>
             <Nav />
             <Hero />
+            <Block />
             <Work />
             <Tech />
             {/* <Skills /> */}

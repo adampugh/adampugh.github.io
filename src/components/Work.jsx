@@ -5,10 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import '../styles/components/Work.scss';
 
 import Project from './Project';
-import Example from '../assets/images/prepxp.png';
-import Mobile from '../assets/images/prepxp-mobile.png';
-import Kokonoka from '../assets/images/kokonoka.gif';
-import KokonokaMobile from '../assets/images/kokonoka-mobile.png';
+import { projects, numerals } from '../assets/data/projects';
 
 const opacityVariant = {
     initial: {
@@ -22,47 +19,6 @@ const opacityVariant = {
         },
     },
 };
-
-const projects = [
-    {
-        image: Example,
-        device: Mobile,
-        heading: 'Daily HIIT',
-        gitHubLink: 'http://www.google.com',
-        tech: 'REACT | NEXT | TYPESCRIPT',
-        text: 'PrepXP is a web application built in React, Redux and Firebase that allows users to create and search for lists of job interview questions. PrepXP features a blog section created in Node and a comprehensive test suite built in Jest and Enzyme.',
-        projectLink: 'http://www.cool.com',
-    },
-    {
-        image: Example,
-        device: Mobile,
-        heading: 'PrepXP',
-        gitHubLink: 'https://github.com/adampugh/prepxp',
-        tech: 'REACT | REDUX | FIREBASE',
-        text: 'PrepXP is a web application built in React, Redux and Firebase that allows users to create and search for lists of job interview questions. PrepXP features a blog section created in Node and a comprehensive test suite built in Jest and Enzyme.',
-        projectLink: 'https://adampugh.github.io/prepxp/',
-    },
-    {
-        image: Kokonoka,
-        device: KokonokaMobile,
-        heading: 'Kokonoka',
-        gitHubLink: 'http://www.google.com',
-        tech: 'REACT | FRAMER MOTION',
-        text: 'PrepXP is a web application built in React, Redux and Firebase that allows users to create and search for lists of job interview questions. PrepXP features a blog section created in Node and a comprehensive test suite built in Jest and Enzyme.',
-        projectLink: 'http://www.cool.com',
-    },
-    {
-        image: Example,
-        device: Mobile,
-        heading: 'Portfolio',
-        gitHubLink: 'http://www.google.com',
-        tech: 'REACT | THREE.JS | SASS',
-        text: 'PrepXP is a web application built in React, Redux and Firebase that allows users to create and search for lists of job interview questions. PrepXP features a blog section created in Node and a comprehensive test suite built in Jest and Enzyme.',
-        projectLink: 'http://www.cool.com',
-    },
-];
-
-const numerals = ['I', 'II', 'III', 'IV'];
 
 const Work = () => {
     const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
@@ -79,18 +35,20 @@ const Work = () => {
         return () => clearTimeout(timer);
     }, [isAnimating]);
 
+    const updateProject = (index) => {
+        setActiveIndex(index);
+        setIsAnimating(true);
+        setCurrentProjectIndex(index);
+    };
+
     const handleNumeralClick = (e) => {
         const datasetIndex = e.target.dataset.index;
-        setActiveIndex(datasetIndex);
-        setIsAnimating(true);
-        setCurrentProjectIndex(datasetIndex);
+        updateProject(datasetIndex);
     };
 
     const handleNextProject = () => {
         const nextIndex = projects[currentProjectIndex + 1] ? currentProjectIndex + 1 : 0;
-        setActiveIndex(nextIndex);
-        setIsAnimating(true);
-        setCurrentProjectIndex(nextIndex);
+        updateProject(nextIndex);
     };
 
     if (inView) {
@@ -114,33 +72,29 @@ const Work = () => {
                 variants={opacityVariant}
                 initial='initial'
                 animate={animationControl}>
+                <div className='work__numerals'>
+                    {numerals.map((text, index) => (
+                        <button
+                            key={text}
+                            className={index === +activeIndex ? 'work__numerals__selected' : ''}
+                            data-index={index}
+                            onClick={handleNumeralClick}>
+                            {text}
+                        </button>
+                    ))}
+                </div>
                 <h2 className='title__h2'>
                     <span className='title__h2__number'>01</span>Work
                 </h2>
-            </motion.div>
-            <AnimatePresence>
-                {!isAnimating && <Project project={projects[currentProjectIndex]} isAnimating={isAnimating} />}
-            </AnimatePresence>
-            <div className='container work__bottom'>
-                <div className='work__numerals'>
-                    {numerals.map((text, index) => {
-                        return (
-                            <button
-                                key={text}
-                                className={index === +activeIndex ? 'work__numerals__selected' : ''}
-                                data-index={index}
-                                onClick={handleNumeralClick}>
-                                {text}
-                            </button>
-                        );
-                    })}
-                </div>
                 <div className='work__nextProject'>
                     <button onClick={handleNextProject} className='spaced-text'>
                         NEXT PROJECT
                     </button>
                 </div>
-            </div>
+            </motion.div>
+            <AnimatePresence>
+                {!isAnimating && <Project project={projects[currentProjectIndex]} isAnimating={isAnimating} />}
+            </AnimatePresence>
         </div>
     );
 };
