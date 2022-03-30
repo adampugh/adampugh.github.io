@@ -5,6 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import '../styles/components/Work.scss';
 
 import Project from './Project';
+import StaggeredText from './StaggeredText';
 import { projects, numerals } from '../assets/data/projects';
 
 const opacityVariant = {
@@ -84,7 +85,8 @@ const Work = () => {
                     ))}
                 </div>
                 <h2 className='title__h2'>
-                    <span className='title__h2__number'>01</span>Work
+                    <span className='title__h2__number'>01</span>
+                    <StaggeredText text='Work' />
                 </h2>
                 <div className='work__nextProject'>
                     <button onClick={handleNextProject} className='spaced-text'>

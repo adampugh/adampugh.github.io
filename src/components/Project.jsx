@@ -53,7 +53,7 @@ const Project = ({ project }) => {
                 initial={{ opacity: 0, x: 100 }}
                 exit={{
                     opacity: 0,
-                    x: [0, -100, 100],
+                    x: [0, -50, 100],
                     transition: {
                         duration: 0.7,
                         times: [0, 0.9, 1],
