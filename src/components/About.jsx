@@ -6,6 +6,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 import '../styles/components/About.scss';
+import StaggeredText from './StaggeredText';
 
 const opacityVariant = {
     initial: {
@@ -30,8 +31,8 @@ const About = () => {
             y: 0,
             transition: {
                 type: 'intertia',
-                when: 'beforeChildren',
-                staggerChildren: 0.4,
+                when: 'afterChildren',
+                // staggerChildren: 0.4,
                 delay: 0.5,
                 duration: 1,
             },
@@ -44,8 +45,9 @@ const About = () => {
                 variants={opacityVariant}
                 initial='initial'
                 animate={animationControl}>
-                <h2 className='title__h2'>
-                    <span className='title__h2__number'>03</span>Abøųt
+                <h2 className='title__h2' style={{ overflow: 'hidden' }}>
+                    <span className='title__h2__number'>03</span>
+                    <StaggeredText text='Abøųt' />
                 </h2>
                 <p>
                     Self-taught developer, enthusiastic about learning and building purposeful projects with users in

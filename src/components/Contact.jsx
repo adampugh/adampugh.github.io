@@ -5,6 +5,8 @@ import { useInView } from 'react-intersection-observer';
 
 import '../styles/components/Contact.scss';
 
+import StaggeredText from './StaggeredText';
+
 const opacityVariant = {
     initial: {
         opacity: 0,
@@ -12,7 +14,7 @@ const opacityVariant = {
     animate: {
         opacity: 1,
         transition: {
-            delay: 0.5,
+            // delay: 5.5,
             duration: 0.6,
         },
     },
@@ -28,8 +30,8 @@ const Contact = () => {
             y: 0,
             transition: {
                 type: 'intertia',
-                when: 'beforeChildren',
-                staggerChildren: 0.4,
+                when: 'afterChildren',
+                // staggerChildren: 0.4,
                 delay: 0.5,
                 duration: 1,
             },
@@ -39,8 +41,9 @@ const Contact = () => {
     return (
         <section id='contact' ref={ref}>
             <motion.div className='container' variants={opacityVariant} initial='initial' animate={animationControl}>
-                <h2 className='title__h2'>
-                    <span className='title__h2__number'>04</span>Cøntąct
+                <h2 className='title__h2' style={{ overflow: 'hidden' }}>
+                    <span className='title__h2__number'>04</span>
+                    <StaggeredText text='Cøntąct' />
                 </h2>
                 <a href='mailto:adampugh@zoho.com'>
                     <FontAwesomeIcon className='contact__mail' icon={faEnvelope} />

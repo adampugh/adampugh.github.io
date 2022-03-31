@@ -14,7 +14,7 @@ const opacityVariant = {
     animate: {
         opacity: 1,
         transition: {
-            delay: 0.5,
+            delay: 0.1,
             duration: 0.6,
         },
     },
@@ -31,8 +31,8 @@ const Project = ({ project }) => {
             opacity: 1,
             x: 0,
             transition: {
-                delay: 1,
-                duration: 0.7,
+                delay: 0.5,
+                duration: 0.5,
             },
         });
     }

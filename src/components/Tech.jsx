@@ -1,5 +1,7 @@
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import StaggeredText from './StaggeredText';
+
 import '../styles/components/Tech.scss';
 
 const opacityVariant = {
@@ -25,7 +27,7 @@ const Tech = () => {
             transition: {
                 type: 'intertia',
                 when: 'beforeChildren',
-                staggerChildren: 0.4,
+                // staggerChildren: 0.4,
                 delay: 0.5,
                 duration: 1,
             },
@@ -34,8 +36,12 @@ const Tech = () => {
     return (
         <section id='tech' ref={ref}>
             <motion.div className='container' variants={opacityVariant} initial='initial' animate={animationControl}>
-                <h2 className='title__h2'>
+                {/* <h2 className='title__h2'>
                     <span className='title__h2__number'>02</span>Skills
+                </h2> */}
+                <h2 className='title__h2' style={{ overflow: 'hidden' }}>
+                    <span className='title__h2__number'>02</span>
+                    <StaggeredText text='Skills' id='tech__heading' />
                 </h2>
                 <div className='tech__badges__grid'>
                     <div className='tech__badge'>
