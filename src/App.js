@@ -7,10 +7,12 @@ import Tech from './components/Tech';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Skull from './components/Skull';
 
 const App = () => {
     return (
         <div className='App'>
+            <Skull />
             <Nav />
             <Hero />
             <Block />

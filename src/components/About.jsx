@@ -47,7 +47,7 @@ const About = () => {
                 animate={animationControl}>
                 <h2 className='title__h2' style={{ overflow: 'hidden' }}>
                     <span className='title__h2__number'>03</span>
-                    <StaggeredText text='Abøųt' />
+                    <StaggeredText text='About' />
                 </h2>
                 <p>
                     Self-taught developer, enthusiastic about learning and building purposeful projects with users in

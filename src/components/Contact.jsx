@@ -43,7 +43,7 @@ const Contact = () => {
             <motion.div className='container' variants={opacityVariant} initial='initial' animate={animationControl}>
                 <h2 className='title__h2' style={{ overflow: 'hidden' }}>
                     <span className='title__h2__number'>04</span>
-                    <StaggeredText text='Cøntąct' />
+                    <StaggeredText text='Contact' />
                 </h2>
                 <a href='mailto:adampugh@zoho.com'>
                     <FontAwesomeIcon className='contact__mail' icon={faEnvelope} />

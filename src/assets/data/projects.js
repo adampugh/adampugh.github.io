@@ -2,16 +2,18 @@ import Example from '../images/prepxp.png';
 import Mobile from '../images/prepxp-mobile.png';
 import Kokonoka from '../images/kokonoka.gif';
 import KokonokaMobile from '../images/kokonoka-mobile.png';
+import DailyHIIT from '../images/daily-hiit.png';
+import DailyHIITMobile from '../images/daily-hiit-mobile.png';
 
 export const projects = [
     {
-        image: Example,
-        device: Mobile,
+        image: DailyHIIT,
+        device: DailyHIITMobile,
         heading: 'Daily HIIT',
-        gitHubLink: 'http://www.google.com',
-        tech: 'REACT | NEXT | TYPESCRIPT',
+        gitHubLink: 'https://github.com/adampugh/dailyhiit',
+        tech: 'NEXT | TYPESCRIPT | TAILWIND',
         text: 'PrepXP is a web application built in React, Redux and Firebase that allows users to create and search for lists of job interview questions. PrepXP features a blog section created in Node and a comprehensive test suite built in Jest and Enzyme.',
-        projectLink: 'http://www.cool.com',
+        projectLink: 'https://dailyhiit.vercel.app/',
     },
     {
         image: Example,
@@ -26,19 +28,19 @@ export const projects = [
         image: Kokonoka,
         device: KokonokaMobile,
         heading: 'Kokonoka',
-        gitHubLink: 'http://www.google.com',
+        gitHubLink: 'https://github.com/adampugh/kokonoka-digital',
         tech: 'REACT | FRAMER MOTION',
         text: 'PrepXP is a web application built in React, Redux and Firebase that allows users to create and search for lists of job interview questions. PrepXP features a blog section created in Node and a comprehensive test suite built in Jest and Enzyme.',
-        projectLink: 'http://www.cool.com',
+        projectLink: 'http://www.kokonoka.io',
     },
     {
         image: Example,
         device: Mobile,
         heading: 'Portfolio',
-        gitHubLink: 'http://www.google.com',
+        gitHubLink: 'https://github.com/adampugh/portfolioV2',
         tech: 'REACT | THREE.JS | SASS',
         text: 'PrepXP is a web application built in React, Redux and Firebase that allows users to create and search for lists of job interview questions. PrepXP features a blog section created in Node and a comprehensive test suite built in Jest and Enzyme.',
-        projectLink: 'http://www.cool.com',
+        projectLink: 'adampugh.github.io',
     },
 ];
 

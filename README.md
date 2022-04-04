@@ -1,15 +1,10 @@
 # Todos
 
--   add project tab
--   Buy and add font
 -   Add three.js and model
 -   Animate 3D model on scroll
--   Finish Work section horizontal scroll
--   Add three.js wavey image motion
 -   Cursor animation
 -   Add OutRun tv (maybe just add placeholder with pixel art + 3D model)
 -   Add smooth scroll
--   Create project pages ?? - is this needed? live link + gh link
 -   Deploy (github pages?)
 
 # Getting Started with Create React App
