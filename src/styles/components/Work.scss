@@ -14,9 +14,13 @@
 
     .work__header {
         padding-bottom: 80px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        text-align: center;
+
+        @media only screen and (min-width: 600px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 
     .work__bottom {
@@ -38,6 +42,7 @@
     }
 
     .work__numerals {
+        // display: none;
         font-size: 40px;
         cursor: default;
         button {

@@ -1,6 +1,6 @@
 #hero {
     position: relative;
-    height: 90vh; // remove later
+    height: 100vh; // remove later
 
     .hero__title__container {
         display: flex;
@@ -12,8 +12,19 @@
             text-align: left;
 
             .hero__title {
-                font-size: 140px;
+                font-size: 110px;
                 overflow: hidden;
+
+                @media only screen and (min-width: 600px) {
+                    font-size: 140px;
+                }
+
+                span {
+                    span {
+                        // color: rgb(70, 20, 70);
+                        // line-height: 0.6;
+                    }
+                }
             }
 
             .hero__title--second {
@@ -25,10 +36,14 @@
 
     .hero__copyright {
         position: absolute;
-        top: 20vh;
+        top: 75vh;
         writing-mode: vertical-rl;
         text-orientation: mixed;
         cursor: default;
+
+        @media only screen and (min-width: 600px) {
+            top: 20vh;
+        }
     }
 
     .hero__view-projects {

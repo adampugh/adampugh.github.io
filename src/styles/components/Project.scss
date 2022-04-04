@@ -2,26 +2,36 @@
     padding-bottom: 100px;
 
     .project__grid {
-        display: grid;
-        grid-template-columns: 1.5fr 1fr;
+        @media only screen and (min-width: 600px) {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+        }
 
         .project__grid__images {
             max-width: 100%;
             position: relative;
 
             .project__grid__images__mainImage {
-                // max-width: 80%;
-                max-width: 523px;
-                margin: 0 auto;
-                padding: 0 70px;
-                margin-left: 110px;
+                margin-bottom: 40px;
+
+                @media only screen and (min-width: 600px) {
+                    margin: 0 auto;
+                    max-width: 523px;
+                    padding: 0 70px;
+                    margin-left: 110px;
+                }
             }
 
             .project__grid__images__device {
-                position: absolute;
-                left: 0;
-                top: 20%;
-                max-height: 380px;
+                display: none;
+
+                @media only screen and (min-width: 600px) {
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 20%;
+                    max-height: 380px;
+                }
             }
         }
 
@@ -55,7 +65,12 @@
             }
 
             .project__grid__info__tech {
-                margin-bottom: 10px;
+                display: none;
+
+                @media only screen and (min-width: 600px) {
+                    display: block;
+                    margin-bottom: 10px;
+                }
             }
 
             .project__grid__info__button {
