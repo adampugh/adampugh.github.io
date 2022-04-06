@@ -1,16 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Sarabun&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Prata&family=Vidaloka&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Prata&family=Rufina&display=swap');
-@import url('//db.onlinewebfonts.com/c/d4b20671043ec9c735f94908955a5332?family=BastardEvenFatterW00-EvenFatter');
 
 @font-face {
     font-family: 'Vultura';
     src: local('Vultura'), url('../assets/fonts/VulturaRegular/font.woff2') format('truetype');
     font-weight: 400;
+    font-display: fallback;
 }
 
 @font-face {
     font-family: 'VulturaOutline';
     src: local('VulturaOutline'), url('../assets/fonts/VulturaOutlineRegular/font.woff2') format('truetype');
     font-weight: 'lighter';
+    font-display: fallback;
 }

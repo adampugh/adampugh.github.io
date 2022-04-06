@@ -1,6 +1,6 @@
 #hero {
     position: relative;
-    height: 100vh; // remove later
+    height: 100vh;
 
     .hero__title__container {
         display: flex;
@@ -18,18 +18,10 @@
                 @media only screen and (min-width: 600px) {
                     font-size: 140px;
                 }
-
-                span {
-                    span {
-                        // color: rgb(70, 20, 70);
-                        // line-height: 0.6;
-                    }
-                }
             }
 
             .hero__title--second {
                 margin-top: -90px;
-                // font-family: 'VulturaOutline';
             }
         }
     }
@@ -54,6 +46,7 @@
         margin-right: 56px;
         transition: 0.4s;
         color: var(--foreground);
+        z-index: 100;
 
         &:hover {
             cursor: pointer;

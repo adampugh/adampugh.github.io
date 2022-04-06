@@ -1,10 +1,9 @@
 #work {
     background: var(--black);
     color: var(--white);
-    padding-bottom: 400px;
+    padding: 200px 0 400px;
 
     .title__h2 {
-        color: var(--white);
         text-align: center;
     }
 
@@ -16,7 +15,7 @@
         padding-bottom: 80px;
         text-align: center;
 
-        @media only screen and (min-width: 600px) {
+        @media only screen and (min-width: 950px) {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -32,17 +31,18 @@
 
     .work__nextProject {
         button {
-            cursor: pointer;
-            transition: 0.4s;
+            @media only screen and (min-width: 950px) {
+                cursor: pointer;
+                transition: 0.4s;
 
-            &:hover {
-                color: grey;
+                &:hover {
+                    color: grey;
+                }
             }
         }
     }
 
     .work__numerals {
-        // display: none;
         font-size: 40px;
         cursor: default;
         button {

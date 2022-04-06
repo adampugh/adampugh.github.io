@@ -2,7 +2,7 @@
     padding-bottom: 100px;
 
     .project__grid {
-        @media only screen and (min-width: 600px) {
+        @media only screen and (min-width: 950px) {
             display: grid;
             grid-template-columns: 1.5fr 1fr;
         }
@@ -14,7 +14,7 @@
             .project__grid__images__mainImage {
                 margin-bottom: 40px;
 
-                @media only screen and (min-width: 600px) {
+                @media only screen and (min-width: 950px) {
                     margin: 0 auto;
                     max-width: 523px;
                     padding: 0 70px;
@@ -25,7 +25,7 @@
             .project__grid__images__device {
                 display: none;
 
-                @media only screen and (min-width: 600px) {
+                @media only screen and (min-width: 950px) {
                     display: block;
                     position: absolute;
                     left: 0;
@@ -41,6 +41,7 @@
             h4,
             p {
                 font-family: 'Sarabun', sans-serif;
+                font-size: 16px;
             }
 
             .project__grid__info__heading {
@@ -48,7 +49,7 @@
                 justify-content: space-between;
                 margin-bottom: 20px;
                 margin-bottom: 10px;
-                border-bottom: 1px solid white;
+                border-bottom: 1px solid #2a2a2a;
                 padding-bottom: 10px;
                 align-items: baseline;
 
@@ -67,7 +68,7 @@
             .project__grid__info__tech {
                 display: none;
 
-                @media only screen and (min-width: 600px) {
+                @media only screen and (min-width: 950px) {
                     display: block;
                     margin-bottom: 10px;
                 }
@@ -87,51 +88,3 @@
         }
     }
 }
-
-// .project {
-//     position: relative;
-//     background: var(--black);
-
-//     .image__wrapper {
-//         position: relative;
-
-//         .image__text {
-//             position: absolute;
-//             color: var(--white);
-//             width: 100%;
-//             text-align: center;
-//             z-index: 1;
-//             top: 40px;
-//         }
-
-//         img {
-//             position: absolute;
-//             left: 0;
-//             right: 0;
-//             margin-left: auto;
-//             margin-right: auto;
-//             width: 320px; /* Need a specific value to work */
-//             z-index: 0;
-//         }
-//     }
-
-//     .project__text {
-//         position: absolute;
-//         right: 0;
-//         width: 440px;
-//         color: var(--white);
-//         top: 130px;
-//         z-index: 10;
-//     }
-
-//     .project__rotating__text {
-//         text-align: right;
-//         margin-right: 56px;
-//         margin-top: 66px;
-//         transition: 0.4s;
-
-//         &:hover {
-//             color: grey;
-//         }
-//     }
-// }

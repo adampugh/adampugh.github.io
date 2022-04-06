@@ -14,7 +14,6 @@ const opacityVariant = {
     animate: {
         opacity: 1,
         transition: {
-            // delay: 5.5,
             duration: 0.6,
         },
     },
@@ -31,7 +30,6 @@ const Contact = () => {
             transition: {
                 type: 'intertia',
                 when: 'afterChildren',
-                // staggerChildren: 0.4,
                 delay: 0.5,
                 duration: 1,
             },
@@ -45,7 +43,7 @@ const Contact = () => {
                     <span className='title__h2__number'>04</span>
                     <StaggeredText text='Contact' />
                 </h2>
-                <a href='mailto:adampugh@zoho.com'>
+                <a href='mailto:adampugh@zoho.com' aria-label='contact'>
                     <FontAwesomeIcon className='contact__mail' icon={faEnvelope} />
                 </a>
             </motion.div>

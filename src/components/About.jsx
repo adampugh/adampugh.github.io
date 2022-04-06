@@ -32,7 +32,6 @@ const About = () => {
             transition: {
                 type: 'intertia',
                 when: 'afterChildren',
-                // staggerChildren: 0.4,
                 delay: 0.5,
                 duration: 1,
             },
@@ -62,17 +61,21 @@ const About = () => {
                 </p>
                 <div className='about__icons'>
                     <a href='https://github.com/adampugh' target='_blank' rel='noreferrer'>
-                        <button>
+                        <button aria-label='github'>
                             <FontAwesomeIcon icon={faGithubSquare} />
                         </button>
                     </a>
-                    <a href='https://www.linkedin.com/in/adam-pugh-59502b88/' target='_blank' rel='noreferrer'>
-                        <button>
+                    <a
+                        href='https://www.linkedin.com/in/adam-pugh-59502b88/'
+                        target='_blank'
+                        rel='noreferrer'
+                        aria-label='linkedin'>
+                        <button aria-label='linkedin'>
                             <FontAwesomeIcon icon={faLinkedin} />
                         </button>
                     </a>
-                    <a href='https://twitter.com/adam_frontdev' target='_blank' rel='noreferrer'>
-                        <button>
+                    <a href='https://twitter.com/adam_frontdev' target='_blank' rel='noreferrer' aria-label='twitter'>
+                        <button aria-label='twitter'>
                             <FontAwesomeIcon icon={faTwitterSquare} />
                         </button>
                     </a>

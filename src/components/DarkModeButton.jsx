@@ -6,13 +6,9 @@ import { faMoon } from '@fortawesome/free-solid-svg-icons';
 import '../styles/components/DarkModeButton.scss';
 
 const updateTheme = (isDarkEnabled) => {
-    // Get all available styles
     const styles = getComputedStyle(document.body);
-
-    // Optional shorthand constant for accessing document.documentElement
     const docEl = document.documentElement;
 
-    // Get the --black and --white variable values
     const black = styles.getPropertyValue('--black');
     const white = styles.getPropertyValue('--white');
 
@@ -30,7 +26,7 @@ const DarkModeButton = () => {
 
     useEffect(() => {
         updateTheme(isEnabled);
-    }, [isEnabled]); // got a feeling this will have to be moved
+    }, [isEnabled]);
 
     const toggleState = () => setIsEnabled((prevState) => !prevState);
 

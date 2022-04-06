@@ -5,6 +5,8 @@ import FadeIn from './FadeIn';
 import StaggeredText from './StaggeredText';
 import RotatingText from './RotatingText';
 
+import scrollToElement from '../utils/scrollToElement';
+
 const XsScreenStaggeredText = () => <></>;
 
 const SScreenStaggeredText = () => (
@@ -56,7 +58,10 @@ const Hero = () => {
             </div>
             <FadeIn>
                 <p className='hero__copyright spaced-text'>© 2022 KOKONOKA</p>
-                <button className='hero__view-projects spaced-text'>
+                <button
+                    className='hero__view-projects spaced-text'
+                    aria-label='view projects'
+                    onClick={() => scrollToElement('work')}>
                     <RotatingText text={'View ☠ Projects ☠ '} />
                 </button>
             </FadeIn>

@@ -4,7 +4,6 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 import RotatingText from './RotatingText';
-
 import '../styles/components/Project.scss';
 
 const opacityVariant = {
@@ -26,7 +25,6 @@ const Project = ({ project }) => {
     const animationControl = useAnimation();
 
     if (inView) {
-        // individual animationControls ??
         animationControl.start({
             opacity: 1,
             x: 0,
@@ -60,7 +58,7 @@ const Project = ({ project }) => {
                     },
                 }}>
                 <div className='project__grid__images'>
-                    <img className='project__grid__images__mainImage' src={image} alt='plants' />
+                    <img className='project__grid__images__mainImage' src={image} alt='project' />
                     <motion.img
                         initial={{ opacity: 0, x: -100, y: 50 }}
                         animate={{
@@ -87,9 +85,9 @@ const Project = ({ project }) => {
                 </div>
                 <div className='project__grid__info'>
                     <div className='project__grid__info__heading'>
-                        <h4 className='spaced-text'>{heading}</h4>
+                        <h3 className='spaced-text'>{heading}</h3>
                         <a href={gitHubLink} target='_blank' rel='noreferrer'>
-                            <button>
+                            <button aria-label='github'>
                                 <FontAwesomeIcon icon={faGithubSquare} />
                             </button>
                         </a>
