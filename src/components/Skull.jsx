@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { useLoader } from '@react-three/fiber';
+import { ResizeObserver } from '@juggle/resize-observer';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -64,7 +65,7 @@ const Skull = (props) => {
             variants={opacityVariant}
             initial='initial'
             animate={animationControl}>
-            <Canvas>
+            <Canvas resize={{ polyfill: ResizeObserver }}>
                 <ambientLight color={'#ffffff'} intensity={'0.4'} />
                 <directionalLight
                     color={'#90EE90'}
