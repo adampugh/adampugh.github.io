@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a7bdc895.css",
+    "main.js": "/static/js/main.65b37bd5.js",
+    "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "static/media/skull.glb": "/static/media/skull.0b095ca63e599a275ece.glb",
+    "static/media/kokonoka.webp": "/static/media/kokonoka.39a0a8945716eec2240e.webp",
+    "static/media/portfolio.webp": "/static/media/portfolio.8001b91a9f99c389b273.webp",
+    "static/media/daily-hiit.webp": "/static/media/daily-hiit.97253a25e27f0c707070.webp",
+    "static/media/kokonoka-mobile.webp": "/static/media/kokonoka-mobile.dc4151e5c4795d3e5c74.webp",
+    "static/media/daily-hiit-mobile.webp": "/static/media/daily-hiit-mobile.4b21f2e5935c76886fc9.webp",
+    "static/media/font.woff2": "/static/media/font.017fb5e45c9590bf794e.woff2",
+    "static/media/prepxp.webp": "/static/media/prepxp.855ba7bbcee5ce8472cb.webp",
+    "static/media/prepxp-mobile.webp": "/static/media/prepxp-mobile.e2807b60059d05f35642.webp",
+    "static/media/portfolio-mobile.webp": "/static/media/portfolio-mobile.d765c610b8f86779d1e1.webp",
+    "index.html": "/index.html",
+    "main.a7bdc895.css.map": "/static/css/main.a7bdc895.css.map",
+    "main.65b37bd5.js.map": "/static/js/main.65b37bd5.js.map",
+    "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a7bdc895.css",
+    "static/js/main.65b37bd5.js"
+  ]
+}
