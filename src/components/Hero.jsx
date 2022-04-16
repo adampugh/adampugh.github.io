@@ -10,34 +10,34 @@ import scrollToElement from '../utils/scrollToElement';
 const XsScreenStaggeredText = () => <></>;
 
 const SScreenStaggeredText = () => (
-    <>
-        <h1 className='hero__title'>
+    <h1>
+        <span className='hero__title'>
             <StaggeredText text='Fron' />
-        </h1>
-        <h1 className='hero__title hero__title--second'>
-            <StaggeredText text='end' />
-        </h1>
-        <h1 className='hero__title hero__title--second'>
+        </span>
+        <span className='hero__title hero__title--second'>
+            <StaggeredText text='tend' />
+        </span>
+        <span className='hero__title hero__title--second'>
             <StaggeredText text='Dev' />
-        </h1>
-        <h1 className='hero__title hero__title--second'>
+        </span>
+        <span className='hero__title hero__title--second'>
             <StaggeredText text='elop' />
-        </h1>
-        <h1 className='hero__title hero__title--second'>
+        </span>
+        <span className='hero__title hero__title--second'>
             <StaggeredText text='er' />
-        </h1>
-    </>
+        </span>
+    </h1>
 );
 
 const LgScreenStaggeredText = () => (
-    <>
-        <h1 className='hero__title'>
+    <h1>
+        <span className='hero__title'>
             <StaggeredText text='Frontend' />
-        </h1>
-        <h1 className='hero__title hero__title--second'>
+        </span>
+        <span className='hero__title hero__title--second'>
             <StaggeredText text='Developer' />
-        </h1>
-    </>
+        </span>
+    </h1>
 );
 
 const Hero = () => {
