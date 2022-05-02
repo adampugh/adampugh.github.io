@@ -9,6 +9,7 @@
     cursor: pointer;
     background: var(--foreground);
     transition: background var(--transition);
+    // background: orange;
 
     &:before {
         content: '';
@@ -41,11 +42,11 @@
         color: var(--background);
     
         svg {
-        fill: var(--white);
-        height: 14px;
-        width: 11px;
-        z-index: 0;
-        color: var(--background);
+            fill: var(--white);
+            height: 14px;
+            width: 11px;
+            z-index: 0;
+            color: var(--background);
         }
     }
 }
