@@ -9,6 +9,7 @@
     cursor: pointer;
     background: var(--foreground);
     transition: background var(--transition);
+    // background: orange;
 
     &:before {
         content: '';
