@@ -1,14 +1,3 @@
-# Todos
-
--   cleanup
--   Deploy (github pages?)
-
-# Later Todos
-
--   Animate 3D model on scroll
--   Cursor animation
--   Add OutRun tv (maybe just add placeholder with pixel art + 3D model)
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
