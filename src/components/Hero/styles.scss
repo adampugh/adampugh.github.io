@@ -1,0 +1,8 @@
+.hero {
+  position: relative;
+
+  .container {
+    @include m.container;
+    position: relative;
+  }
+}

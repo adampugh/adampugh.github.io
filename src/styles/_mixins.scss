@@ -1,3 +1,74 @@
-@mixin card() {
-  border: 4px solid orange;
+@use 'sass:map';
+@use 'sass:math';
+
+$body-font-size: 16;
+$base-line-px: 8px;
+
+$site-breakpoints: (
+  xs: 450,
+  sm: 600,
+  md: 768,
+  ml: 992,
+  lg: 1176,
+  xl: 1440,
+  xxl: 2786,
+  max: 1440,
+) !default;
+
+@mixin media-up($size) {
+  $min: map.get($site-breakpoints, $size);
+  @if $min {
+    @media (min-width: #{$min}px) {
+      @content;
+    }
+  } @else {
+    @warn "Couldn't find a breakpoint named `#{$size}` in $site-breakpoints.";
+  }
+}
+
+@mixin container {
+  margin-inline: auto;
+  padding-inline: 16px;
+
+  @include media-up(lg) {
+    max-width: 1440px;
+    padding-inline: 32px;
+  }
+}
+
+@function strip-unit($value) {
+  @return math.div($value, $value * 0 + 1);
+}
+
+@function remify($px-value) {
+  $unitless: strip-unit($px-value);
+  @return math.div($unitless, $body-font-size) * 1rem;
+}
+
+@mixin set-font-size($px-size) {
+  font-size: remify($px-size);
+}
+
+@mixin set-line-height($font-size, $height) {
+  line-height: math.div(strip-unit($height), strip-unit($font-size));
+}
+
+@mixin text-rhythm($size: 16, $height: 20) {
+  @include set-font-size($size);
+  @if $height {
+    @include set-line-height($size, $height);
+  }
+}
+
+@mixin subtitle($color: var(--black)) {
+  @include text-rhythm(24, 24);
+  font-family: var(--font-body);
+  color: $color;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 300;
+
+  @include media-up(lg) {
+    @include text-rhythm(36, 36);
+  }
 }
