@@ -1,0 +1,11 @@
+{
+  "files": [],
+  "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }],
+  "compilerOptions": {
+    "noUncheckedIndexedAccess": true, // array/object index access returns T | undefined
+    "exactOptionalPropertyTypes": true, // distinguishes `foo?: string` from `foo?: string | undefined`
+    "noImplicitOverride": true, // requires `override` keyword on overridden methods
+    "noPropertyAccessFromIndexSignature": true, // forces obj['key'] instead of obj.key for index-signature types
+    "verbatimModuleSyntax": true // forces explicit `import type` for type-only imports, clearer build output
+  }
+}
