@@ -3,8 +3,46 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 12px 0;
 
   &__title {
     @include m.subtitle();
+    margin-left: 8px;
+  }
+
+  &__language-select {
+    &__button {
+      background-color: transparent;
+      border: none;
+      text-decoration: none;
+      position: relative;
+      margin: 0 4px;
+
+      &--japanese {
+        @include m.text-rhythm(12, 24);
+        font-family: var(--font-heading);
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0%;
+        height: 100%;
+        background-color: var(--black);
+        transition: all 0.3s ease-in-out;
+        z-index: -1;
+      }
+
+      &:hover {
+        cursor: pointer;
+        color: var(--white);
+
+        &::before {
+          width: 100%;
+        }
+      }
+    }
   }
 }

@@ -5,4 +5,12 @@
     @include m.container;
     position: relative;
   }
+
+  &__title {
+    @include m.title();
+
+    span {
+      display: block;
+    }
+  }
 }

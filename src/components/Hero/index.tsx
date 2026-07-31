@@ -7,6 +7,10 @@ const Hero = () => {
     <section className="hero">
       <div className="container">
         <Nav />
+        <h1 className="hero__title">
+          <span>Frontend</span>
+          <span>Engineer</span>
+        </h1>
         <SideNav />
       </div>
     </section>
