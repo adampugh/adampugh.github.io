@@ -78,10 +78,17 @@ $site-breakpoints: (
   font-family: var(--font-heading);
   color: $color;
   text-transform: uppercase;
-  // letter-spacing: 0.04em;
   font-weight: 400;
 
   @include media-up(lg) {
     @include text-rhythm(240, 170);
   }
+}
+
+@mixin bodyText($color: var(--black)) {
+  @include text-rhythm(20, 40);
+  font-family: var(--font-body);
+  color: $color;
+  font-weight: 400;
+  letter-spacing: 0.04em;
 }

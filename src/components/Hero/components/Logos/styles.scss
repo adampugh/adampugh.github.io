@@ -1,0 +1,44 @@
+.logos {
+  margin-top: -200px;
+  overflow: hidden;
+
+  &__title {
+    @include m.subtitle();
+    @include m.container();
+    padding-left: 8px;
+  }
+
+  &__marquee {
+    overflow: visible;
+    width: 100%;
+  }
+
+  &__track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: logos-scroll 60s linear infinite;
+  }
+
+  &__image {
+    width: auto;
+    flex-shrink: 0;
+    object-fit: contain;
+    margin-right: 48px;
+  }
+}
+
+@keyframes logos-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-33.3333%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logos__track {
+    animation: none;
+  }
+}

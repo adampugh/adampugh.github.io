@@ -1,5 +1,6 @@
 .hero {
   position: relative;
+  padding-bottom: 80px;
 
   .container {
     @include m.container;
@@ -8,6 +9,8 @@
 
   &__title {
     @include m.title();
+    position: absolute;
+    left: 0;
 
     span {
       display: block;

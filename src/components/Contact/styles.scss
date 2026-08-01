@@ -1,3 +1,16 @@
 .contact {
   background-color: var(--black);
+  color: var(--white);
+  padding: 80px 0 260px;
+
+  &__container {
+    @include m.container();
+  }
+
+  &__title {
+    @include m.title(var(--white));
+  }
+
+  &__form {
+  }
 }

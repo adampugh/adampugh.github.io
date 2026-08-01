@@ -1,6 +1,8 @@
 import './styles.scss'
 import Nav from './components/Nav'
 import SideNav from '../Sidenav'
+import HeroMain from './components/HeroMain'
+import Logos from './components/Logos'
 
 const Hero = () => {
   return (
@@ -11,8 +13,10 @@ const Hero = () => {
           <span>Frontend</span>
           <span>Engineer</span>
         </h1>
+        <HeroMain />
         <SideNav />
       </div>
+      <Logos />
     </section>
   )
 }
