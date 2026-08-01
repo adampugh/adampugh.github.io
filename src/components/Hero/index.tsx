@@ -6,7 +6,7 @@ import Logos from './components/Logos'
 
 const Hero = () => {
   return (
-    <section className="hero">
+    <section className="hero" id="home">
       <div className="container">
         <Nav />
         <h1 className="hero__title">
@@ -14,7 +14,9 @@ const Hero = () => {
           <span>Engineer</span>
         </h1>
         <HeroMain />
-        <SideNav />
+        <div className="hero__sidenav__container">
+          <SideNav />
+        </div>
       </div>
       <Logos />
     </section>

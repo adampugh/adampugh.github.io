@@ -15,8 +15,8 @@ const SideNav = ({ blackBg = false }) => {
 
   return (
     <aside className={`side-nav ${blackBg ? 'side-nav--black' : ''}`.trim()}>
-      {links.map((link) => (
-        <SideNavLink text={link} />
+      {links.map((link, i) => (
+        <SideNavLink text={link} key={i} />
       ))}
     </aside>
   )

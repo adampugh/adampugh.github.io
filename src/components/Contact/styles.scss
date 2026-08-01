@@ -1,16 +1,168 @@
 .contact {
   background-color: var(--black);
   color: var(--white);
-  padding: 80px 0 260px;
+  padding: 80px 0;
+  overflow: hidden;
 
   &__container {
-    @include m.container();
+    position: relative;
+
+    @include m.media-up(md) {
+      @include m.container();
+    }
   }
 
   &__title {
+    @include m.container();
     @include m.title(var(--white));
+    margin-bottom: 40px;
+
+    @include m.media-up(md) {
+      margin: 0;
+    }
   }
 
   &__form {
+    border: 1px solid var(--white);
+    border-radius: 20px;
+    padding: 12px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    max-width: 620px;
+    margin: 0 auto;
+    position: relative;
+    background-color: var(--black);
+
+    @include m.media-up(md) {
+      margin-top: -40px;
+      padding: 40px 40px 40px;
+    }
+
+    &__label {
+      @include m.text-rhythm(20, 24);
+      padding: 18px 0;
+    }
+
+    input,
+    textarea {
+      @include m.text-rhythm(20, 24);
+      background-color: transparent;
+      border: 1px solid var(--white);
+      border-radius: 12px;
+      padding: 12px;
+      color: var(--white);
+      position: relative;
+      z-index: 9;
+    }
+
+    textarea {
+      margin-bottom: 24px;
+
+      @include m.media-up(md) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__button {
+      @include m.bodyText(var(--white));
+      border: 1px solid (var(--white));
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: var(--white);
+      transition: all 0.3s ease-in-out;
+      justify-content: center;
+      background-color: transparent;
+      text-align: center;
+      position: relative;
+      z-index: 9;
+
+      @include m.media-up(lg) {
+        padding: 2px 12px;
+      }
+
+      i,
+      svg {
+        fill: var(--white);
+        color: var(--white);
+        margin-left: 8px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: var(--white);
+        color: var(--black);
+
+        i,
+        svg {
+          fill: var(--black);
+          color: var(--black);
+        }
+      }
+    }
+  }
+
+  &__form__wrapper {
+    position: relative;
+    max-width: 620px;
+    margin: 0 auto;
+    overflow: visible;
+  }
+
+  &__guitar {
+    position: absolute;
+    bottom: -30px;
+    left: 76%;
+    width: 100%;
+
+    img {
+      object-fit: contain;
+      height: 477px;
+      width: 433px;
+      transform: rotate(-12deg);
+    }
+  }
+
+  &__plant {
+    position: absolute;
+    bottom: -80px;
+    right: 30%;
+    width: 100%;
+
+    img {
+      object-fit: contain;
+      height: 377px;
+      width: 233px;
+    }
+  }
+
+  &__scroll-to-top {
+    @include m.subtitle(var(--white));
+    background-color: transparent;
+    margin: 0 auto;
+    border: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 9;
+
+    i,
+    svg {
+      margin-top: 4px;
+      margin-left: 4px;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &__wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 40px 0;
+    }
   }
 }

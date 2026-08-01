@@ -1,5 +1,5 @@
 import './styles.scss'
-import SkeletonDesk from '../../assets/skeleton-desk-temp.png'
+import SkeletonDesk from '../../assets/skeleton-desktop-animation.webp'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import { IoDownload } from 'react-icons/io5'
 

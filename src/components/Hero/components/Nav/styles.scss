@@ -7,7 +7,11 @@
   position: relative;
 
   &__title {
-    @include m.subtitle();
+    @include m.text-rhythm(20, 24);
+    font-family: var(--font-body);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
     margin-left: 8px;
   }
 

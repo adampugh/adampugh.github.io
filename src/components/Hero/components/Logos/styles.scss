@@ -3,9 +3,13 @@
   overflow: hidden;
 
   &__title {
-    @include m.subtitle();
     @include m.container();
+    @include m.text-rhythm(20, 24);
     padding-left: 8px;
+    font-family: var(--font-body);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
   }
 
   &__marquee {
