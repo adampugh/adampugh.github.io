@@ -92,3 +92,9 @@ $site-breakpoints: (
   font-weight: 400;
   letter-spacing: 0.04em;
 }
+
+@mixin spacedText($color: var(--black)) {
+  @include subtitle($color);
+  @include text-rhythm(20, 24);
+  letter-spacing: 0.2em;
+}

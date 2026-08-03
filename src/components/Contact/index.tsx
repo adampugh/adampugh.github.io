@@ -42,7 +42,7 @@ const Contact = () => {
             })
           }
         >
-          Back to the top <BsArrowUp size={26} />
+          Back to the top <BsArrowUp size={18} />
         </button>
       </div>
     </section>

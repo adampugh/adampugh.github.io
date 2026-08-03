@@ -14,9 +14,11 @@ const About = () => {
           </div>
           <div className="about__content">
             <p className="about__content__text">
-              Worked as the lead front end engineer building the site with Reacct and other tech
-              building evertthing I was upposed to build so here it is let’s just code this as fast
-              as possible and then I don’t have tho think about this at all.
+              An experienced front-end engineer specialising in React, I've worked with fantastic
+              digital agencies helping to build large-scale projects for clients from Premier League
+              football clubs to global fashion brands with millions of monthly users. I enjoy
+              bringing designers' visions to life in pixel-perfect code. Currently studying Three.js
+              and Japanese.
             </p>
             <div className="about__content__links">
               <a

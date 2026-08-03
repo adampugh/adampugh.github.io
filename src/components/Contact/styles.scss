@@ -139,7 +139,8 @@
   }
 
   &__scroll-to-top {
-    @include m.subtitle(var(--white));
+    // @include m.subtitle(var(--white));
+    @include m.spacedText(var(--white));
     background-color: transparent;
     margin: 0 auto;
     border: none;
@@ -150,7 +151,7 @@
 
     i,
     svg {
-      margin-top: 4px;
+      margin-top: 0px;
       margin-left: 4px;
     }
 
