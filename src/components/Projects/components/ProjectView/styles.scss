@@ -23,6 +23,10 @@
     @include m.title(var(--white));
     position: relative;
     z-index: 2;
+
+    html[lang='jp'] & {
+      @include m.text-rhythm(80, 80);
+    }
   }
 
   &__flex {
@@ -76,6 +80,7 @@
       &__tech-icons {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        gap: 4px;
 
         &__icon {
           display: flex;
@@ -87,6 +92,10 @@
             @include m.spacedText(var(--white));
             @include m.text-rhythm(16, 20);
             text-align: center;
+
+            html[lang='jp'] & {
+              @include m.text-rhythm(12, 20);
+            }
           }
         }
       }

@@ -1,4 +1,5 @@
 import './styles.scss'
+import { m } from '@/paraglide/messages.js'
 import { useState } from 'react'
 import { projectsData as projects } from './data'
 import ProjectView from './components/ProjectView'
@@ -17,7 +18,7 @@ const Projects = () => {
           <ProjectView selectedProject={selectedProject} clearProject={clearProject} />
         ) : (
           <>
-            <h1 className="projects__title">Projects</h1>
+            <h1 className="projects__title">{m.projectsTitle()}</h1>
             <div className="projects__list">
               {projects.map(({ id, name, imageSrc }) => (
                 <div

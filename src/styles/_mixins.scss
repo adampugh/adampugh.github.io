@@ -71,6 +71,11 @@ $site-breakpoints: (
   @include media-up(lg) {
     @include text-rhythm(36, 36);
   }
+
+  html[lang='jp'] & {
+    font-weight: 400;
+    font-family: var(--font-body-jp);
+  }
 }
 
 @mixin title($color: var(--black)) {
@@ -82,6 +87,15 @@ $site-breakpoints: (
 
   @include media-up(lg) {
     @include text-rhythm(240, 170);
+  }
+
+  html[lang='jp'] & {
+    @include text-rhythm(80, 60);
+    font-family: var(--font-heading-jp);
+
+    @include media-up(lg) {
+      @include text-rhythm(160, 130);
+    }
   }
 }
 

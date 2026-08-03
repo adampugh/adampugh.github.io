@@ -1,0 +1,35 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "heroText1": "フロントエンド",
+  "heroText2": "エンジニア",
+  "logoText": "開発に携わった企業：",
+  "homeTitle": "ホーム",
+  "projectsTitle": "実績",
+  "aboutTitle": "プロフィール",
+  "contactTitle": "お問い合わせ",
+  "projectsBack": "実績一覧に戻る",
+  "viewProjectsLink": "プロジェクトを見る",
+  "techUsed": "使用技術：",
+
+  "projectBrentfordTitle": "Brentford FC",
+  "projectBrentfordText": "フロントエンド開発を主導し、React・TypeScript・SassとStorybookを用いてピクセルパーフェクトなデザインを実現。デザイナー、PM、クライアント、バックエンドエンジニアと密に連携し、タイトな納期の中でメインサイトと関連サイトをリリースしました。",
+
+  "projectSouthamptonTitle": "Southampton FC",
+  "projectSouthamptonText": "フロントエンド開発を主導し、React・TypeScript・SassとStorybookを用いてデザイナーと綿密に連携しながらピクセルパーフェクトなUIを構築。動画配信セクションを開発し.NETバックエンドと連携、PMやバックエンドエンジニアと協力して納期を遵守しました。",
+
+  "projectOtherTitle": "その他の実績",
+  "projectOtherText": "複数のデジタルエージェンシーにてReactとNext.jsを用いたプロジェクトを手がけ、PSGやTeam GBを含む大規模なレガシークライアントサイト群を保守。Louis Vuitton、Estée Lauder、Emiratesなどのブランドに対してA/Bテストの実施や多様な技術スタックでの機能開発を行い、コードレビューやジュニアエンジニアのメンタリングも担当しました。",
+
+  "projectWeb3Title": "Web3プロジェクト",
+  "projectWeb3Text": "",
+
+  "aboutText": "Reactを専門とする経験豊富なフロントエンドエンジニアです。優れたデジタルエージェンシーと共に、プレミアリーグのサッカークラブから月間数百万人が利用するグローバルなファッションブランドまで、幅広いクライアントの大規模プロジェクトに携わってきました。デザイナーが描くビジョンをピクセルパーフェクトなコードで形にすることにやりがいを感じています。現在はThree.jsと日本語を学習中です。",
+  "githubLink": "GitHub",
+  "linkedInLink": "LinkedIn",
+  "downloadCVLink": "履歴書DL",
+  "contactEmailLabel": "メールアドレス",
+  "contactMessageLabel": "メッセージ",
+  "contactButtonText": "送信する",
+  "contactConfirmationMessage": "メッセージを送信しました",
+  "backToTopLink": "トップに戻る"
+}

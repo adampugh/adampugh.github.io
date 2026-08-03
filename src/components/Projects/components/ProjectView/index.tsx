@@ -1,4 +1,5 @@
 import './styles.scss'
+import { m } from '@/paraglide/messages.js'
 import type { ProjectType } from '../../data'
 import { BsArrowRight, BsArrowLeft } from 'react-icons/bs'
 
@@ -15,7 +16,7 @@ const ProjectView = ({
     <div className="selected-project">
       <button className="selected-project__return-button" onClick={clearProject}>
         <BsArrowLeft size={26} />
-        back to projects
+        {m.projectsBack()}
       </button>
       <h1 className="selected-project__title">{name}</h1>
       <div className="selected-project__flex">
@@ -29,12 +30,12 @@ const ProjectView = ({
         </div>
         <div className="selected-project__flex__middle-col">
           <a href={link} className="selected-project__flex__middle-col__link" target="_blank">
-            View Project
+            {m.viewProjectsLink()}
             <BsArrowRight size={26} />
           </a>
           <p className="selected-project__flex__middle-col__text">{text}</p>
 
-          <p className="selected-project__flex__middle-col__tech-used">Tech used:</p>
+          <p className="selected-project__flex__middle-col__tech-used">{m.techUsed()}</p>
           <div className="selected-project__flex__middle-col__tech-icons">
             {tech.map((tech) => (
               <div className="selected-project__flex__middle-col__tech-icons__icon">

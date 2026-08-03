@@ -1,4 +1,5 @@
 import './styles.scss'
+import { m } from '@/paraglide/messages.js'
 import LogoChelsea from '../../../../assets/logos/logo-chelsea.png'
 import LogoElCorte from '../../../../assets/logos/logo-el-corte-ingles.png'
 import LogoEmirates from '../../../../assets/logos/logo-emirates.png'
@@ -12,7 +13,7 @@ const Logos = () => {
 
   return (
     <div className="logos">
-      <p className="logos__title">Find my code on:</p>
+      <p className="logos__title">{m.logoText()}</p>
 
       <div className="logos__marquee">
         <div className="logos__track">

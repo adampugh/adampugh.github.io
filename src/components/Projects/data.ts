@@ -1,4 +1,5 @@
 import type { IconType } from 'react-icons'
+import { m } from '@/paraglide/messages.js'
 import {
   SiReact,
   SiTypescript,
@@ -59,8 +60,8 @@ export interface ProjectType {
 export const projectsData: ProjectType[] = [
   {
     id: 1,
-    name: 'Brentford FC',
-    text: 'Led front-end development, delivering pixel-perfect designs in React, TypeScript and Sass with Storybook. Collaborated closely with designers, PMs, clients and backend engineers to hit tight deadlines and ship the main and supplementary sites.',
+    name: m.projectBrentfordTitle(),
+    text: m.projectBrentfordText(),
     tech: [
       { icon: SiReact, name: 'React' },
       { icon: SiTypescript, name: 'TypeScript' },
@@ -77,8 +78,8 @@ export const projectsData: ProjectType[] = [
   },
   {
     id: 2,
-    name: 'Southampton FC',
-    text: 'Led front-end development, iterating closely with designers on pixel-perfect UI in React, TypeScript and Sass with Storybook. Built the video streaming section, integrated with a .NET backend, and worked with PMs and backend engineers to meet deadlines.',
+    name: m.projectSouthamptonTitle(),
+    text: m.projectSouthamptonText(),
     tech: [
       { icon: SiReact, name: 'React' },
       { icon: SiTypescript, name: 'TypeScript' },
@@ -96,8 +97,8 @@ export const projectsData: ProjectType[] = [
   },
   {
     id: 3,
-    name: 'Other Work',
-    text: 'Built multiple projects in React and Next.js at various digital agencies and maintained a large portfolio of legacy client sites including PSG and Team GB. Ran A/B tests and shipped features across varied tech stacks for brands including Louis Vuitton, Estée Lauder and Emirates, while also conducting code reviews and mentoring junior developers.',
+    name: m.projectOtherTitle(),
+    text: m.projectOtherText(),
     tech: [
       { icon: SiReact, name: 'React' },
       { icon: SiTypescript, name: 'TypeScript' },
@@ -117,8 +118,8 @@ export const projectsData: ProjectType[] = [
   },
   {
     id: 4,
-    name: 'Web3 Project',
-    text: '',
+    name: m.projectWeb3Title(),
+    text: m.projectWeb3Text(),
     tech: [],
     imageSrc: ProjectWeb3,
     imageArray: [ProjectBrentfordImage1, ProjectBrentfordImage2],

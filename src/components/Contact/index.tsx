@@ -1,4 +1,5 @@
 import './styles.scss'
+import { m } from '@/paraglide/messages.js'
 import { IoIosSend } from 'react-icons/io'
 import { BsArrowUp } from 'react-icons/bs'
 import Guitar from '../../assets/guitar.webp'
@@ -8,19 +9,19 @@ const Contact = () => {
   return (
     <section className="contact" id="contact">
       <div className="contact__container">
-        <h2 className="contact__title">Contact</h2>
+        <h2 className="contact__title">{m.contactTitle()}</h2>
         <div className="contact__form__wrapper">
           <form action="" className="contact__form">
             <label htmlFor="email" className="contact__form__label">
-              Email
+              {m.contactEmailLabel()}
             </label>
             <input name="email" aria-required="true" />
             <label htmlFor="message" className="contact__form__label">
-              Message
+              {m.contactMessageLabel()}
             </label>
             <textarea rows={6} />
             <button type="submit" className="contact__form__button">
-              Send Message <IoIosSend size={20} />
+              {m.contactButtonText()} <IoIosSend size={20} />
             </button>
           </form>
           <div className="contact__guitar">
@@ -42,7 +43,7 @@ const Contact = () => {
             })
           }
         >
-          Back to the top <BsArrowUp size={18} />
+          {m.backToTopLink()} <BsArrowUp size={18} />
         </button>
       </div>
     </section>

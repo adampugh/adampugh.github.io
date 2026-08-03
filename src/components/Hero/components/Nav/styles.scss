@@ -9,6 +9,10 @@
   &__title {
     @include m.spacedText();
     margin-left: 8px;
+
+    html[lang='jp'] & {
+      font-family: var(--font-body);
+    }
   }
 
   &__language-select {

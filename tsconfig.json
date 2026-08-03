@@ -7,5 +7,10 @@
     // "noImplicitOverride": true, // requires `override` keyword on overridden methods
     // "noPropertyAccessFromIndexSignature": true, // forces obj['key'] instead of obj.key for index-signature types
     // "verbatimModuleSyntax": true // forces explicit `import type` for type-only imports, clearer build output
+    "allowJs": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   }
 }
