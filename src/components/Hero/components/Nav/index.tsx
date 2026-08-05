@@ -1,15 +1,17 @@
 import './styles.scss'
 import { setLocale } from '../../../../paraglide/runtime.js'
 import { syncHtmlLang } from '../../../../utils/syncHtmlLang'
+import { useFadeIn } from '@/hooks/useGSAPAnimation'
 
 const Nav = () => {
+  const { ref: navRef } = useFadeIn<HTMLElement>('[data-fade]', { y: 0 })
   const handleLocaleChange = (locale: 'en' | 'jp') => {
     setLocale(locale)
     syncHtmlLang()
   }
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" ref={navRef}>
       <h2 className="navbar__title">Adam Pugh</h2>
       <div className="navbar__language-select">
         <button

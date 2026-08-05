@@ -31,5 +31,11 @@
   "contactMessageLabel": "メッセージ",
   "contactButtonText": "送信する",
   "contactConfirmationMessage": "メッセージを送信しました",
-  "backToTopLink": "トップに戻る"
+  "backToTopLink": "トップに戻る",
+
+  "contactSuccessTitle": "メッセージを送信しました",
+  "contactSuccessMessage": "ご連絡いただきありがとうございます。できるだけ早くご返信いたします。",
+
+  "contactErrorEmail": "有効なメールアドレスを入力してください",
+  "contactErrorMessageLength": "10文字以上のメッセージを入力してください"
 }

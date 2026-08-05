@@ -38,6 +38,13 @@
       padding: 40px 40px 40px;
     }
 
+    &__error {
+      @include m.text-rhythm(20, 20);
+      margin: 4px;
+      padding: 0;
+      color: var(--red);
+    }
+
     &__label {
       @include m.text-rhythm(20, 24);
       padding: 18px 0;
@@ -55,14 +62,6 @@
       z-index: 9;
     }
 
-    textarea {
-      margin-bottom: 24px;
-
-      @include m.media-up(md) {
-        margin-bottom: 40px;
-      }
-    }
-
     &__button {
       @include m.bodyText(var(--white));
       border: 1px solid (var(--white));
@@ -77,9 +76,11 @@
       text-align: center;
       position: relative;
       z-index: 9;
+      margin-top: 24px;
 
       @include m.media-up(lg) {
         padding: 2px 12px;
+        margin-top: 40px;
       }
 
       i,
@@ -116,6 +117,7 @@
     bottom: -30px;
     left: 76%;
     width: 100%;
+    z-index: 6;
 
     img {
       object-fit: contain;
@@ -130,6 +132,7 @@
     bottom: -80px;
     right: 30%;
     width: 100%;
+    z-index: 6;
 
     img {
       object-fit: contain;

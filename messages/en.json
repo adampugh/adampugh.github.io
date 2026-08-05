@@ -26,5 +26,11 @@
   "contactMessageLabel": "Message",
   "contactButtonText": "Send Message",
   "contactConfirmationMessage": "Message sent",
-  "backToTopLink": "back to the top"
+  "backToTopLink": "back to the top",
+
+  "contactErrorEmail": "Please enter a valid email",
+  "contactErrorMessageLength": "Please enter a message with more than 10 characters",
+
+  "contactSuccessTitle": "Message sent",
+  "contactSuccessMessage": "Thanks for getting in touch, I will get back to you as soon as possible."
 }
