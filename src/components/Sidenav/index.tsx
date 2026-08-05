@@ -1,7 +1,10 @@
 import './styles.scss'
+import { useState } from 'react'
 import { m } from '@/paraglide/messages.js'
 import SkullRotation from '../../assets/skull_rotation.webp'
 import { useFadeIn } from '@/hooks/useGSAPAnimation'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useGSAP } from '@gsap/react'
 
 const SideNavLink = ({ text, link }: { text: string; link: string }) => {
   return (
@@ -12,8 +15,18 @@ const SideNavLink = ({ text, link }: { text: string; link: string }) => {
   )
 }
 
-const SideNav = ({ blackBg = false }) => {
+const SideNav = () => {
   const { ref: linksRef } = useFadeIn<HTMLBaseElement>('[data-fade]', { delay: 0.4 })
+  const [blackBg, setBlackBg] = useState(false)
+
+  useGSAP(() => {
+    ScrollTrigger.create({
+      trigger: '#projects',
+      start: 'top center',
+      onEnter: () => setBlackBg(true),
+      onLeaveBack: () => setBlackBg(false),
+    })
+  })
 
   const links = [
     { title: m.homeTitle(), link: 'home' },

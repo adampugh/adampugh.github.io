@@ -2,6 +2,7 @@
   position: relative;
 
   &__return-button {
+    @include m.container();
     @include m.spacedText(var(--white));
     background-color: transparent;
     border: none;
@@ -20,6 +21,7 @@
   }
 
   &__title {
+    @include m.container();
     @include m.title(var(--white));
     position: relative;
     z-index: 2;
@@ -32,11 +34,20 @@
   &__flex {
     display: flex;
     column-gap: 148px;
+    flex-direction: column-reverse;
+
+    @include m.media-up(lg) {
+      flex-direction: row;
+    }
 
     &__left-col {
-      display: flex;
-      justify-content: center;
-      max-width: 30%;
+      display: none;
+
+      @include m.media-up(lg) {
+        display: flex;
+        justify-content: center;
+        max-width: 30%;
+      }
 
       &__character-img {
         max-width: 272px;
@@ -54,8 +65,13 @@
     }
 
     &__middle-col {
+      @include m.container();
       @include m.bodyText(var(--white));
-      max-width: 450px;
+      max-width: 100%;
+
+      @include m.media-up(lg) {
+        max-width: 450px;
+      }
 
       &__link {
         @include m.spacedText(var(--white));
@@ -79,8 +95,12 @@
 
       &__tech-icons {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 4px;
+
+        @include m.media-up(lg) {
+          grid-template-columns: repeat(4, 1fr);
+        }
 
         &__icon {
           display: flex;
@@ -102,10 +122,15 @@
     }
 
     &__end-col {
+      @include m.container();
       display: flex;
       flex-direction: column;
-      max-width: 30%;
-      margin-top: 70px;
+      margin-top: 40px;
+
+      @include m.media-up(lg) {
+        max-width: 30%;
+        margin-top: 70px;
+      }
 
       &__image-1,
       &__image-2 {
@@ -126,11 +151,21 @@
 
       &__image-1 {
         z-index: 1;
+        margin-bottom: 20px;
+
+        @include m.media-up(lg) {
+          margin-bottom: 0;
+        }
       }
 
       &__image-2 {
-        margin-top: -40px;
-        margin-left: -60px;
+        display: none;
+
+        @include m.media-up(lg) {
+          display: block;
+          margin-top: -40px;
+          margin-left: -60px;
+        }
       }
     }
   }

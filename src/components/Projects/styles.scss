@@ -8,10 +8,13 @@
   }
 
   &__container {
-    @include m.container();
+    @include m.media-up(lg) {
+      @include m.container();
+    }
   }
 
   &__title {
+    @include m.container();
     @include m.title(var(--white));
   }
 
@@ -22,6 +25,15 @@
     margin-top: -80px;
     width: fit-content;
     position: relative;
+    overflow-x: scroll;
+    width: 100%;
+    padding-left: 48px;
+
+    @include m.media-up(lg) {
+      padding-left: 0;
+      overflow-x: auto;
+      padding: 4px 0;
+    }
 
     &:hover {
       .projects__list__project {
@@ -38,11 +50,19 @@
     }
 
     &__project {
-      margin-left: -48px;
       transition: opacity 0.3s ease-in-out;
+      margin-left: -48px;
+
+      @include m.media-up(lg) {
+        margin-left: -48px;
+      }
 
       &__image {
-        max-width: 272px;
+        width: 200px;
+
+        @include m.media-up(lg) {
+          width: 272px;
+        }
       }
 
       &__name {
