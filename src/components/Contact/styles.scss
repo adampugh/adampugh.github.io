@@ -42,7 +42,6 @@
     @include m.media-up(md) {
       margin-top: -40px;
       padding: 40px 40px 40px;
-      z-index: 0;
     }
 
     &__error {
@@ -66,7 +65,6 @@
       padding: 12px;
       color: var(--white);
       position: relative;
-      z-index: 9;
     }
 
     &__button {

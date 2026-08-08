@@ -11,11 +11,6 @@ const MIN_DISPLAY_MS = 500
 const FADE_DURATION = 0.6
 
 interface PageLoaderProps {
-  // Fired the moment the fade-out begins (not once it finishes) so the
-  // caller can mount scroll-triggered entrance content right then — it
-  // needs to start playing while still hidden behind the fading overlay,
-  // not after, or the "fade in" has nothing left to animate by the time
-  // it's revealed.
   onReady?: () => void
 }
 
@@ -45,17 +40,8 @@ const PageLoader = ({ onReady }: PageLoaderProps) => {
       ease: 'power2.out',
       onComplete: () => setIsHidden(true),
     })
-    // onReady intentionally excluded — this should only ever fire once,
-    // the moment isReady flips true, regardless of the callback's identity.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isReady])
 
-  // Locks the page from scrolling underneath the overlay while loading —
-  // otherwise a scroll while hidden could leave the Hero animation
-  // mid-transition by the time the loader fades away. Set directly from
-  // isReady (rather than relying on unmount cleanup) since this component
-  // stays mounted and just renders null once done — its effect cleanup
-  // would never actually run.
   useEffect(() => {
     document.body.style.overflow = isReady ? '' : 'hidden'
   }, [isReady])
