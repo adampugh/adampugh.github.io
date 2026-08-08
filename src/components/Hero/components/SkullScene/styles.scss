@@ -1,0 +1,48 @@
+@layer components {
+  .skull-scene {
+    width: 100vw;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    // Normal-flow spacer that gives the page real scrollable height — the
+    // fixed canvas layer above contributes none of its own. This fixed
+    // pixel value (rather than vh) keeps the scroll distance for the
+    // rotate/zoom animation consistent across viewport sizes, and gives
+    // the whole-page scroll-snap something real to snap through.
+    &__spacer {
+      height: 2400px;
+    }
+
+    &__pin {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    &__canvas {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+    }
+
+    &__content {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+    }
+
+    &__blackout {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 100vh;
+      z-index: 2;
+      background-color: var(--black);
+      pointer-events: none;
+    }
+  }
+}

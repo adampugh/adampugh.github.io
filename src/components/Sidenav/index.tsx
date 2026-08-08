@@ -1,14 +1,37 @@
 import './styles.scss'
 import { useState } from 'react'
+import type { MouseEvent } from 'react'
 import { m } from '@/paraglide/messages.js'
 import SkullRotation from '../../assets/skull_rotation.webp'
 import { useFadeIn } from '@/hooks/useGSAPAnimation'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { gsap, ScrollTrigger } from '@/lib/gsap'
 import { useGSAP } from '@gsap/react'
+
+const SCROLL_DURATION = 1
+
+const handleLinkClick = (event: MouseEvent<HTMLAnchorElement>, link: string) => {
+  const target = document.getElementById(link)
+  if (!target) return
+
+  // Native anchor jump would be instant (no `scroll-behavior: smooth` —
+  // that conflicts with the GSAP-driven scroll elsewhere on the page), so
+  // this animates the scroll itself instead, on the same engine.
+  event.preventDefault()
+  gsap.to(window, {
+    scrollTo: { y: target, autoKill: true },
+    duration: SCROLL_DURATION,
+    ease: 'power2.inOut',
+  })
+}
 
 const SideNavLink = ({ text, link }: { text: string; link: string }) => {
   return (
-    <a className="side-nav__link" href={`#${link}`} data-fade>
+    <a
+      className="side-nav__link"
+      href={`#${link}`}
+      data-fade
+      onClick={(event) => handleLinkClick(event, link)}
+    >
       <img className="side-nav__link__skull" src={SkullRotation} alt="rotating skull" />
       <span className="side-nav__link__text">{text}</span>
     </a>

@@ -18,7 +18,6 @@ const Logos = () => {
       <p className="logos__title" ref={logoTitleRef}>
         {m.logoText()}
       </p>
-
       <div className="logos__marquee">
         <div className="logos__track">
           {[...logos, ...logos, ...logos].map((logo, i) => (

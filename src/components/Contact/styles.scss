@@ -3,6 +3,8 @@
   color: var(--white);
   padding: 80px 0 20px;
   overflow: hidden;
+  z-index: 9;
+  position: relative;
 
   &__container {
     position: relative;
@@ -16,9 +18,12 @@
     @include m.container();
     @include m.title(var(--white));
     margin-bottom: 40px;
+    position: relative;
+    z-index: 8;
 
     @include m.media-up(md) {
       margin: 0;
+      z-index: 0;
     }
   }
 
@@ -32,10 +37,12 @@
     margin: 0 auto;
     position: relative;
     background-color: var(--black);
+    z-index: 9;
 
     @include m.media-up(md) {
       margin-top: -40px;
       padding: 40px 40px 40px;
+      z-index: 0;
     }
 
     &__error {
@@ -114,10 +121,15 @@
 
   &__guitar {
     position: absolute;
-    bottom: -30px;
-    left: 76%;
+    top: -200px;
     width: 100%;
     z-index: 6;
+
+    @include m.media-up(lg) {
+      bottom: -30px;
+      left: 76%;
+      top: unset;
+    }
 
     img {
       object-fit: contain;
@@ -128,11 +140,16 @@
   }
 
   &__plant {
-    position: absolute;
-    bottom: -80px;
-    right: 30%;
-    width: 100%;
-    z-index: 6;
+    display: none;
+
+    @include m.media-up(lg) {
+      display: block;
+      position: absolute;
+      bottom: -80px;
+      right: 30%;
+      width: 100%;
+      z-index: 6;
+    }
 
     img {
       object-fit: contain;

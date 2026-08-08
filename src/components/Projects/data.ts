@@ -18,6 +18,8 @@ import {
   SiFirebase,
   SiJquery,
   SiHandlebarsdotjs,
+  SiAlchemy,
+  SiZod,
 } from 'react-icons/si'
 
 // brentford project
@@ -40,6 +42,8 @@ import ProjectOtherImage2 from '../../assets/projects/other/project-other-image2
 
 // web3 project
 import ProjectWeb3 from '../../assets/projects/web3/project-web3.webp'
+import ProjectWeb3Image1 from '../../assets/projects/web3/project-web3-image1.webp'
+import ProjectWeb3Image2 from '../../assets/projects/web3/project-web3-image2.webp'
 
 export interface Tech {
   icon: IconType
@@ -120,9 +124,15 @@ export const projectsData: ProjectType[] = [
     id: 4,
     name: m.projectWeb3Title(),
     text: m.projectWeb3Text(),
-    tech: [],
+    tech: [
+      { icon: SiNextdotjs, name: 'Next.js' },
+      { icon: SiTypescript, name: 'TypeScript' },
+      { icon: SiTailwindcss, name: 'Tailwind CSS' },
+      { icon: SiAlchemy, name: 'Alchemy' },
+      { icon: SiZod, name: 'Zod' },
+    ],
     imageSrc: ProjectWeb3,
-    imageArray: [ProjectBrentfordImage1, ProjectBrentfordImage2],
+    imageArray: [ProjectWeb3Image1, ProjectWeb3Image2],
     logoSrc: '',
     link: 'https://www.brentfordfc.com/en',
   },

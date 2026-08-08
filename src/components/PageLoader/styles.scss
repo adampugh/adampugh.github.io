@@ -1,0 +1,46 @@
+@layer components {
+  .page-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    gap: 24px;
+    background-color: var(--black);
+
+    &__title {
+      @include m.title(var(--white));
+      @include m.text-rhythm(60, 60);
+      font-size: 60px !important;
+      text-align: center;
+
+      &::after {
+        content: '.';
+        display: inline-block;
+        width: 1em;
+        text-align: left;
+        animation: page-loader-dots 1.2s steps(1, end) infinite;
+      }
+    }
+
+    &__skull {
+      height: 200px;
+    }
+  }
+}
+
+@keyframes page-loader-dots {
+  0% {
+    content: '.';
+  }
+  33% {
+    content: '..';
+  }
+  66% {
+    content: '...';
+  }
+  100% {
+    content: '.';
+  }
+}

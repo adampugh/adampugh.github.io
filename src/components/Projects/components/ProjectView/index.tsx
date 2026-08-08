@@ -76,7 +76,9 @@ const ProjectView = ({
             target="_blank"
           >
             {m.viewProjectsLink()}
-            <BsArrowRight size={26} />
+            <div className="selected-project__flex__middle-col__link__icon">
+              <BsArrowRight size={26} />
+            </div>
           </a>
           <p ref={paragraphRef} className="selected-project__flex__middle-col__text">
             {text}
