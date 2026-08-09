@@ -42,6 +42,7 @@ import ProjectOtherImage2 from '../../assets/projects/other/project-other-image2
 
 // web3 project
 import ProjectWeb3 from '../../assets/projects/web3/project-web3.webp'
+import ProjectWeb3Logo from '../../assets/projects/web3/project-logo-web3.webp'
 import ProjectWeb3Image1 from '../../assets/projects/web3/project-web3-image1.webp'
 import ProjectWeb3Image2 from '../../assets/projects/web3/project-web3-image2.webp'
 
@@ -133,7 +134,7 @@ export const projectsData: ProjectType[] = [
     ],
     imageSrc: ProjectWeb3,
     imageArray: [ProjectWeb3Image1, ProjectWeb3Image2],
-    logoSrc: '',
+    logoSrc: ProjectWeb3Logo,
     link: 'https://www.brentfordfc.com/en',
   },
 ]
