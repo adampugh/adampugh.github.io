@@ -6,6 +6,7 @@
   "base": "https://adampugh.github.io/",
   "scripts": {
     "dev": "vite",
+    "prebuild": "npx @inlang/paraglide-js compile --project ./project.inlang --outdir ./src/paraglide --emit-ts-declarations",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
