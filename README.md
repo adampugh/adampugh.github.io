@@ -1,3 +1,7 @@
+![Rotating Skull](./src/assets/skull_rotation.webp.webp)
+
+<img src="./src/assets/skull_rotation.webp.webp" width="100%" alt="Dashboard screenshot" />
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -41,7 +45,6 @@ export default defineConfig([
     },
   },
 ])
-
 ```
 
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
@@ -71,5 +74,4 @@ export default defineConfig([
     },
   },
 ])
-
 ```
