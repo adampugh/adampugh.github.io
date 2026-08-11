@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./src/assets/skull_rotation.webp" width="100%" alt="Skull" />
+  <img src="./src/assets/skull_rotation.webp" width="200px" alt="Skull" />
 </div>
 
 # React + TypeScript + Vite
