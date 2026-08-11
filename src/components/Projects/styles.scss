@@ -35,18 +35,18 @@
       padding-left: 0;
       overflow-x: auto;
       width: fit-content;
-    }
 
-    &:hover {
-      .projects__list__project {
-        opacity: 0.32;
-      }
+      &:hover {
+        .projects__list__project {
+          opacity: 0.32;
+        }
 
-      .projects__list__project:hover {
-        opacity: 1;
-
-        .projects__list__project__name {
+        .projects__list__project:hover {
           opacity: 1;
+
+          .projects__list__project__name {
+            opacity: 1;
+          }
         }
       }
     }
