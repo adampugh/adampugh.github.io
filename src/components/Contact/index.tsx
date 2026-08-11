@@ -21,7 +21,7 @@ const Contact = () => {
   const [state, handleSubmit] = useForm('mqpzzrne')
   const [loading, setLoading] = useState(false)
   const [clientErrors, setClientErrors] = useState<ClientErrors>({})
-  const { ref: headingRef } = useLettersRevealMask<HTMLHeadingElement>()
+  const { ref: contactHeadingRef } = useLettersRevealMask<HTMLHeadingElement>()
 
   const validate = (formData: FormData): ClientErrors => {
     const errors: ClientErrors = {}
@@ -56,7 +56,7 @@ const Contact = () => {
   return (
     <section className="contact" id="contact">
       <div className="contact__container">
-        <h2 className="contact__title" ref={headingRef}>
+        <h2 className="contact__title" ref={contactHeadingRef}>
           {m.contactTitle()}
         </h2>
         <div className="contact__form__wrapper">

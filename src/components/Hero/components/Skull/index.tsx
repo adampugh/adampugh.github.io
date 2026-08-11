@@ -11,7 +11,7 @@ const MOUTH_MESH_NAME = 'Plane'
 const MOUTH_INTERIOR_COLOR = '#1e1e1e'
 
 const Skull = forwardRef<Group>(function Skull(_props, ref) {
-  const { scene } = useGLTF(MODEL_PATH)
+  const { scene } = useGLTF(MODEL_PATH, '/draco/')
 
   useEffect(() => {
     const mouth = scene.getObjectByName(MOUTH_MESH_NAME)

@@ -48,7 +48,7 @@ const Projects = () => {
                   <div className="projects__list__project__image" data-fade>
                     <img src={imageSrc} alt={name} />
                   </div>
-                  <h4 className="projects__list__project__name">{name}</h4>
+                  <h3 className="projects__list__project__name">{name}</h3>
                 </div>
               ))}
             </div>

@@ -11,6 +11,7 @@
 
   &__container {
     @include m.container();
+    position: relative;
   }
 
   &__title {

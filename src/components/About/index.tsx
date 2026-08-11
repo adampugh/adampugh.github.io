@@ -4,16 +4,21 @@ import SkeletonDesk from '../../assets/skeleton-desktop-animation.webp'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import { IoDownload } from 'react-icons/io5'
 import { useLettersRevealMask, useFadeIn } from '@/hooks/useGSAPAnimation'
+// import { useEffect } from 'react'
 
 const About = () => {
-  const { ref: headingRef } = useLettersRevealMask<HTMLHeadingElement>()
+  const { ref: aboutHeadingRef } = useLettersRevealMask<HTMLHeadingElement>()
   const { ref: paragraphRef } = useFadeIn<HTMLParagraphElement>()
   const { ref: buttonsRef } = useFadeIn<HTMLDivElement>()
+
+  // useEffect(() => {
+  //   console.log('heading ref', headingRef)
+  // }, [headingRef])
 
   return (
     <section className="about" id="about">
       <div className="about__container">
-        <h2 className="about__title" ref={headingRef}>
+        <h2 className="about__title" ref={aboutHeadingRef}>
           {m.aboutTitle()}
         </h2>
         <div className="about__wrapper">

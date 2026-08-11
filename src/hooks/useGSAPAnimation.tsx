@@ -78,7 +78,7 @@ type MaskOptions = {
 
 export function useLettersRevealMask<T extends HTMLElement>({
   trigger = 'scroll',
-  start = 'top 85%',
+  start = 'top 75%',
   deps = [],
 }: MaskOptions = {}) {
   const ref = useRef<T>(null)
@@ -91,22 +91,25 @@ export function useLettersRevealMask<T extends HTMLElement>({
       const split = SplitText.create(ref.current, {
         type: 'chars',
         mask: 'chars',
-      })
-      splitRef.current = split
+        autoSplit: true,
+        onSplit(self) {
+          splitRef.current = self
 
-      gsap.from(split.chars, {
-        yPercent: 110,
-        stagger: 0.03,
-        duration: 0.6,
-        delay: 0.2,
-        ease: 'power3.out',
-        ...(trigger === 'scroll' && {
-          scrollTrigger: {
-            trigger: ref.current,
-            start,
-            toggleActions: 'play none none reverse',
-          },
-        }),
+          return gsap.from(self.chars, {
+            yPercent: 110,
+            stagger: 0.03,
+            duration: 0.6,
+            delay: 0.2,
+            ease: 'power3.out',
+            ...(trigger === 'scroll' && {
+              scrollTrigger: {
+                trigger: ref.current,
+                start,
+                toggleActions: 'play none none reverse',
+              },
+            }),
+          })
+        },
       })
 
       return () => split.revert()
