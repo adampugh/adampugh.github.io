@@ -1,6 +1,7 @@
-![Rotating Skull](./src/assets/skull_rotation.webp)
-
+<div align="center>
+  
 <img src="./src/assets/skull_rotation.webp" width="100%" alt="Dashboard screenshot" />
+</div>
 
 # React + TypeScript + Vite
 
