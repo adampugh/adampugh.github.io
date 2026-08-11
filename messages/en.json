@@ -17,7 +17,7 @@
   "projectOtherTitle": "Other Work",
   "projectOtherText": "Built multiple projects in React and Next.js at various digital agencies and maintained a large portfolio of legacy client sites including PSG and Team GB. Ran A/B tests and shipped features across varied tech stacks for brands including Louis Vuitton, Estée Lauder and Emirates, while also conducting code reviews and mentoring junior developers.",
   "projectWeb3Title": "Web3 Project",
-  "projectWeb3Text": "hello",
+  "projectWeb3Text": "Built a wallet analysis dashboard in Next.js, TypeScript and Tailwind CSS, using Server Actions and the App Router to fetch and render live data using Alchemy API. Used Zod to validate third-party data and filter for spam with a test suite built in Vitest.",
   "aboutText": "An experienced front-end engineer specialising in React, I've worked with fantastic digital agencies helping to build large-scale projects for clients from Premier League football clubs to global fashion brands with millions of monthly users. I enjoy bringing designers' visions to life in pixel-perfect code. Currently studying Three.js and Japanese.",
   "githubLink": "GitHub",
   "linkedInLink": "LinkedIn",

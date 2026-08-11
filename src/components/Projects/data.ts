@@ -20,6 +20,7 @@ import {
   SiHandlebarsdotjs,
   SiAlchemy,
   SiZod,
+  SiVitest,
 } from 'react-icons/si'
 
 // brentford project
@@ -131,10 +132,11 @@ export const projectsData: ProjectType[] = [
       { icon: SiTailwindcss, name: 'Tailwind CSS' },
       { icon: SiAlchemy, name: 'Alchemy' },
       { icon: SiZod, name: 'Zod' },
+      { icon: SiVitest, name: 'Vitest' },
     ],
     imageSrc: ProjectWeb3,
     imageArray: [ProjectWeb3Image1, ProjectWeb3Image2],
     logoSrc: ProjectWeb3Logo,
-    link: 'https://www.brentfordfc.com/en',
+    link: 'https://chaintrace-rho.vercel.app/',
   },
 ]

@@ -21,7 +21,7 @@
   "projectOtherText": "複数のデジタルエージェンシーにてReactとNext.jsを用いたプロジェクトを手がけ、PSGやTeam GBを含む大規模なレガシークライアントサイト群を保守。Louis Vuitton、Estée Lauder、Emiratesなどのブランドに対してA/Bテストの実施や多様な技術スタックでの機能開発を行い、コードレビューやジュニアエンジニアのメンタリングも担当しました。",
 
   "projectWeb3Title": "Web3プロジェクト",
-  "projectWeb3Text": "",
+  "projectWeb3Text": "Next.js、TypeScript、Tailwind CSSを用いてウォレット分析ダッシュボードを構築した。Server ActionsとApp Routerを活用し、Alchemy API経由でリアルタイムデータを取得・描画した。Zodでサードパーティデータの検証とスパムフィルタリングを実装し、Vitestでテストスイートを構築した。",
 
   "aboutText": "Reactを専門とする経験豊富なフロントエンドエンジニアです。優れたデジタルエージェンシーと共に、プレミアリーグのサッカークラブから月間数百万人が利用するグローバルなファッションブランドまで、幅広いクライアントの大規模プロジェクトに携わってきました。デザイナーが描くビジョンをピクセルパーフェクトなコードで形にすることにやりがいを感じています。現在はThree.jsと日本語を学習中です。",
   "githubLink": "GitHub",
