@@ -137,8 +137,6 @@
         max-width: 350px;
         min-height: 220px;
         max-height: 220px;
-        border: 2px solid var(--white);
-        border-radius: 20px;
         overflow: hidden;
 
         img {
@@ -146,6 +144,8 @@
           width: 100%;
           object-fit: cover;
           object-position: top;
+          border: 2px solid var(--white);
+          border-radius: 20px;
         }
       }
 

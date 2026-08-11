@@ -23,6 +23,7 @@
       text-decoration: none;
       position: relative;
       margin: 0 4px;
+      color: var(--black);
 
       &--japanese {
         @include m.text-rhythm(12, 24);
